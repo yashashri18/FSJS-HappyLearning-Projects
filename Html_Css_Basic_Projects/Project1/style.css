@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #F9F5ED;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav{
+    padding: 20px 10%;
+    height: 15vh;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 5%;
+}
+nav ul li{
+    font-weight: 500;
+}
+
+
+/* CSS For Hero Section */
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin: 100px 17% 0px 10%;
+}
+
+.leftmain{
+    margin-right: 70px;
+}
+.leftmain h1{
+    font-size: 60px;
+}
+.leftmain p{
+    margin: 5% 0;
+}
+.leftmain button{
+    color: white;
+    background-color: #3b855b;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.rightmain{
+    /* width: 60%; */
+}
+.rightmain img{
+    margin: 5px;
+}
