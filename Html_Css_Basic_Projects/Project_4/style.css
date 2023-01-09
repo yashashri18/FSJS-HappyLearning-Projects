@@ -1,0 +1,86 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+
+
+/* Body Styling */
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Navbar Styling */
+.container .navbar-container{
+    padding: 4% 5% 0% 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav .logo{
+    width: 10%;
+    margin-right: 80px;
+}
+nav .grow-list{
+    width: 80%;
+}
+nav .button-group{
+    width: 10%;
+}
+.container .navbar-container .grow-list .list{
+    display: flex;
+    list-style: none;  
+    font-size: 20px; 
+}
+.container .navbar-container .grow-list .list li{
+    margin: 3px 10px;
+    color: grey
+}
+.container .navbar-container .grow-list .list li:first-child{
+    color: #000000;
+}
+.container .navbar-container .button-group .nav-button{
+    padding: 20px 32px;
+    background: #5855b3;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* Hero Section */
+
+.banner-container{
+    display: flex;
+    margin-top: 60px;
+    padding-left: 7%;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-container .heading-text{
+    font-size: 70px;
+    color: #34326b;
+    margin-bottom: 45px;
+}
+
+.banner-container .heading-text span{
+    color: #5855b3;
+}
+
+.banner-container .description{
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 70px;
+}
+.banner-container .nav-button{
+    background: #5855b3;
+    color: white;
+    padding: 25px 35px;
+    border: honeydew;
+    border-radius: 12px;
+    font-size: 18px;
+}
