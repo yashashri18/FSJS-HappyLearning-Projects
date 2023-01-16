@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242B2E;
+    color: white;
+    padding: 30px 0px 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+/* Hedaer Styling */
+header{
+    padding: 0px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 22px;
+}
+header ul li{
+    padding: 0px 40px;
+}
+header .header_right{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    gap: 10px;
+}
+.header .header_right .down_arrow{
+    height: 10px;
+    width: 10px;
+}
+.header .header_right .btn_bg{
+    position: relative;
+    left: 30px;
+}
+
+/* Simplify All Transactions in One card Section Styling*/
+
+.simplify_section{
+    padding: 100px 0px 100px 15%;
+    position: relative; 
+}
+.simplify_section .left{
+    width: 55%;
+}
+.simplify_section .left h1{
+    font-size: 90px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.simplify_section .left span{
+    color: rgb(170, 52, 189);
+}
+.simplify_section .left > p{
+    font-size: 26px;
+    color: #c9c8c8;
+    margin-bottom: 100px;
+    font-weight: 300;
+
+}
+.simplify_section .left .get_started{
+    display: flex; 
+    align-items: center;
+    margin-bottom: 100px;
+}
+.simplify_section .left .get_started .get_started_img{
+    height: 30px;
+}
+.simplify_section .left .get_started .get_started_text{
+    position: relative;
+    left: -20px;
+    font-size: 20px;
+}
+.simplify_section .left .count{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.simplify_section .left .count .count_num{
+    font-size: 55px;
+}
+.simplify_section .left .count .count_text{
+    font-size: 20px;
+    color: #c9c8c8;
+}
+
+
+.simplify_section .mid{
+    position: absolute;
+    right: 160px;
+    top: 0;
+}
+.simplify_section .right{
+    position: absolute;
+    right: 0px;
+    top: 40px;
+}
+
+/* 5 logo section styling */
+.logo_section{
+    padding: 100px 15%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #3c3d3d;
+}
+
+/* Transactions Section Styling */
+
+.transactions_section{
+    padding: 150px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transactions_section h1{
+    width: 65%;
+    font-size: 90px;
+    font-weight: 500;
+}
+.transactions_section h1 span{
+    color: rgb(170, 52, 189);
+}
+.transactions_section p{
+    width: 35%;
+    font-size: 26px;
+    color: #c9c8c8;
+    font-weight: 300;
+}
+
+/* 3 Cards Section */
+.cards{
+    padding: 0px 15% 150px 15%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 50px;
+}
+.cards .card-item{
+    text-align: center;
+    background-color:#363535;
+    padding: 70px 50px;
+    width: 33.33%;
+    border: 1px solid white;
+}
+.cards .card-item h1{
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.cards .card_second{
+    background-color:#525252;
+    position: relative;
+    top: -50px;
+    border-top: 30px;
+}
+
+
