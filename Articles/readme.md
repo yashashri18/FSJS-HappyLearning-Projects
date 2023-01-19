@@ -24,6 +24,10 @@
 
 [Click here](https://yashashri.hashnode.dev/all-you-need-to-know-about-css-grid)
 
+## Css Box Model 
+
+[Click here](https://yashashri.hashnode.dev/you-must-know-css-box-model)
+
 ## Array and Its Methods in Javascript - PART 1
 
 [Click here](https://yashashri.hashnode.dev/array-and-its-methods-in-javascript-part-1)
