@@ -365,3 +365,63 @@ header .header_right button{
     height: 10px;
     border-radius: 20px;
 }
+
+/* Sign Up Section */
+
+.sign_up_section{
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.sign_up_section>h1{
+    font-size: 48px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.sign_up_section .sign_up_section_form{
+    background-color: #4b4b4b;
+    padding: 50px;
+    border-radius: 30px;
+}
+.sign_up_section .sign_up_section_form input{
+    background-color: #585858;
+    border: none;
+    padding: 20px;
+    border-radius: 40px;
+    color: white;
+    margin: 0px 10px;
+    width: 20%;
+}
+
+.sign_up_section .sign_up_section_form input::placeholder {
+    color: white;
+}
+
+.footer_menu{
+   padding: 100px 50px;
+   display: flex;
+   justify-content: space-around;
+   border-top: 1px solid #dfdfdf;
+   border-bottom: 1px solid #dfdfdf;
+}
+
+.footer_menu .footer_menu_column ul{
+    list-style-type: none;
+}
+.footer_menu .footer_menu_column ul li{
+    padding: 10px;
+    color: #dfdfdf;
+}
+.footer_menu .footer_menu_column ul li:first-child{
+    padding-bottom: 25px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Footer logo */
+.footer_logo{
+    padding: 40px 10%;
+}
+
