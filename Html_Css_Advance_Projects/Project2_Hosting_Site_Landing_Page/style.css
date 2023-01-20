@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 30px 0px 150px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* padding: 0px 10%; */
+}
+
+/* Hedaer Styling */
+header{
+    padding: 40px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 22px;
+    color: #a0a0a0;
+}
+header ul li{
+    padding: 0px 20px;
+}
+header .header_right button{
+    border: none;
+    font-size: 20px;
+    padding: 10px 40px;
+    border-radius: 100px;
+    background-color: #2491FF;
+    color: white;
+}
+
+
+/* Hero Section Styling */
+.hero_section{
+    padding: 40px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 180px;
+}
+.hero_section h1{
+    font-size: 90px;
+    margin-bottom: 40px;
+}
+.hero_section h1 span{
+    color:  #2491FF;
+    font-style: italic;
+}
+.hero_section p{
+    font-size: 20px;
+    color: #a0a0a0;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.hero_section .btn_group .get_started{
+    border: none;
+    font-size: 18px;
+    padding: 15px 15px;
+    border-radius: 100px;
+    background-color: #2491FF;
+    color: white;
+    margin-right: 20px;
+}
+
+.hero_section .btn_group .free_try{
+    border: 1px solid #ffffff;
+    font-size: 18px;
+    padding: 15px 15px;
+    border-radius: 100px;
+    background-color:transparent;
+    color:  #ffffff;
+}
+
+
+/* Logo Row */
+.logo_section{
+    padding: 40px 15%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #3c3d3d;
+}
+
+
+/* Cards Section Styling */
+.cards_section{
+    padding: 100px 10% 40px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+.cards_section h1{
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+.cards_section > p{
+    font-size: 18px;
+    color: #a0a0a0;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+
+.cards_section .cards_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.cards_section .cards_row .cards_item{
+    border: 1px solid #a0a0a0;
+    border-radius: 25px;
+    padding: 20px 20px 50px 20px;
+}
+.cards_section .cards_row .cards_item img{
+    margin-bottom: 30px;
+}
+.cards_section .cards_row .cards_item h2{
+    margin-bottom: 30px;
+}
+.cards_section .cards_row .cards_item p{
+    color: #a0a0a0;
+    width: 60%;
+    margin: auto;
+}
+
