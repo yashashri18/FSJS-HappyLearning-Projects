@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: rgb(37, 37, 37); */
+    /* color: white; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+
+.header_div{
+    padding: 50px 10% 70px;
+    background-image: url(./Assets/Photos/futuristic-bg.png);
+    background-position: center;
+}
+
+.header_div header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_div header .header_logo{
+    width: 20%;
+}
+.header_div header .header_menu{
+    width: 40%;
+}
+.header_div header .header_menu ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    color: azure;
+}
+.header_div header .header_btn_group{
+    width: 40%;
+    text-align: right;
+}
+
+.header_div header .header_btn_group .header_btn_signin{
+    background: transparent;
+    border: none;
+    color: azure;
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.header_div header .header_btn_group .header_btn_signup{
+    background: #f07a4c;
+    border: none;
+    color: azure;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+
+.header_div .header_hero{
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-between;
+    gap: 600px;
+}
+
+.header_div .header_hero .header_hero_left{
+    width: 70%;
+}
+.header_div .header_hero .header_hero_left h1{
+    font-size: 40px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.header_div .header_hero .header_hero_left p{
+    color: rgb(213, 213, 213);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    padding-bottom: 40px;
+}
+.header_div .header_hero .header_hero_left .hero_btn_group .header_btn_first{
+    background: #f07a4c;
+    border: none;
+    color: azure;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.header_div .header_hero .header_hero_left .hero_btn_group .header_btn_second{
+    background: transparent;
+    border: none;
+    color: azure;
+    padding: 10px 10px;
+    font-size: 18px;
+    border: 1px solid azure;
+    margin-left: 10px;
+}
+.header_div .header_hero .header_hero_right{
+    width: 30%;
+    text-align: center;  
+}
+
+.header_div .header_hero .header_hero_right .header_hero_right_top{
+    margin-top: 50px;
+}
+.header_div .header_hero .header_hero_right .header_hero_right_bottom{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    
+}
+.header_div .header_hero .header_hero_right .header_hero_right_bottom p{
+    padding: 0px 8px;
+    text-align: left;
+    color: white;
+}
+.header_div .header_hero .header_hero_right .header_hero_right_bottom img:first-child{
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.header_div .header_hero .header_hero_right .header_hero_right_bottom img:last-child{
+    align-self: flex-end;
+}
+.game_cards {
+    padding: 100px 10%;
+   
+}
+.game_cards h1{
+    font-size: 40px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.game_cards .game_cards_grid{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.game_cards .game_cards_grid .game_cards_grid_item{
+    /* background-image: url(./Assets/Photos/image\ 2.png);background-size: cover; */
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 400px;
+    background-position: center;
+    position: relative;
+    
+}
+.game_cards .game_cards_grid .game_cards_grid_item:first-child{
+        background-image: url(./Assets/Photos/image\ 2.png);background-size: cover;
+}
+.game_cards .game_cards_grid .game_cards_grid_item:nth-child(2){
+    background-image: url(./Assets/Photos/image\ 4.png);background-size: cover;
+}
+.game_cards .game_cards_grid .game_cards_grid_item:nth-child(3){
+    background-image: url(./Assets/Photos/image\ 3.png);background-size: cover;
+}
+.game_cards .game_cards_grid .game_cards_grid_item:nth-child(4){
+    background-image: url(./Assets/Photos/Rectangle\ 56.png);background-size: cover;
+}
+.game_cards .game_cards_grid .game_cards_grid_item .game_cards_grid_details{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.9;
+    background: #606060;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.game_cards .game_cards_grid .game_cards_grid_item .game_cards_grid_details button{
+    background: #f07a4c;
+    border: none;
+    color: azure;
+    padding: 10px 20px;
+    font-size: 18px;
+    opacity: 1;
+}
+
+.game_cards .game_cards_grid .game_cards_grid_item h3{
+    color:white;
+    margin-bottom: 10px;
+}
+.game_cards .game_cards_grid .game_cards_grid_item p{
+    color: #1e1e1c;
+    margin-bottom: 10px;
+}
+
