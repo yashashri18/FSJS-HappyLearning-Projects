@@ -285,3 +285,109 @@ body{
     padding: 10px 20px;
     font-size: 18px;
 }
+
+.section_popular{
+    padding: 100px 10% 0px;
+    background-color: #1e1e1c;
+    color: aliceblue;
+}
+.section_popular h1{
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section_popular .section_popular_top{
+    display: flex;
+    gap: 100px;
+    padding-right: 300px;
+}
+.section_popular .section_popular_top img{
+    width: 350px;
+} 
+.section_popular .section_popular_top p{  
+    font-size: 16px;
+    line-height: 32px;
+}
+.section_popular .section_popular_bottom div:first-child{
+    text-align: right;
+    position: relative;
+    top: -200px;
+    right: 290px;
+}
+.section_popular .section_popular_bottom .section_popular_bottom_images{
+    position: relative;
+    bottom: 230px;
+    text-align: right;
+}
+.section_popular .section_popular_bottom .section_popular_bottom_images .image_first{ 
+    width: 300px;
+}
+.section_popular .section_popular_bottom .section_popular_bottom_images .image_second{
+    width: 350px;
+} 
+
+.gamer_section{
+    padding: 150px 10% 100px;
+    background-color: #1e1e1c;
+    color: aliceblue;
+    text-align: center;
+    background-image: url(./Assets/Photos/Rectangle\ 606.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.gamer_section h2{
+    font-size: 40px;
+    margin: auto;
+    width: 35%;
+    margin-bottom: 20px;    
+}
+.gamer_section p{
+    width: 35%;
+    margin: auto;
+    margin-bottom: 30px; 
+}
+.gamer_section button{
+    background: #f07a4c;
+    border: none;
+    color: azure;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+Footer{
+    padding: 100px 10% 0px;
+    background-color: #1e1e1c;
+    color: rgb(205, 205, 205);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+Footer div img{
+    margin-bottom: 20px;
+}
+Footer div p{
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 28px;
+}
+Footer div .img_group{
+    display: flex;
+    gap: 10px;
+}
+Footer div ul{
+    list-style-type: none;
+}
+Footer div ul li{
+    padding: 10px 0px;
+    font-weight: 100;
+    
+}
+Footer div ul li:first-child{
+    font-weight: 900;
+    font-size: 18px;
+}
