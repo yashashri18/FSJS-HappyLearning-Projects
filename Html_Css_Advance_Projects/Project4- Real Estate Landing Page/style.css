@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    background-color: #f6f8fa;  
+}
+
+Header{
+    padding: 20px 10% 300px;
+    background-image: url(./Photos/mainBackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+} 
+Header .menu_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(210, 210, 210);
+    padding: 20px;
+    margin-bottom: 150px;
+
+}
+Header .menu_section div ul{
+    display: flex;
+    list-style-type: none; 
+    color: white;
+}
+Header .menu_section div ul li{
+    padding: 20px;
+}
+Header .hero_section{
+    width: 50%;
+}
+Header .hero_section h1{
+    color: white;
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+Header .hero_section p{
+    color: rgb(210, 210, 210);
+    width: 55%;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+Header .hero_section button{
+    background-color: #6663e9;
+    border: none;
+    color: white;
+    padding: 20px 35px;
+    border-radius: 30px;
+    font-size: 20px;
+}
