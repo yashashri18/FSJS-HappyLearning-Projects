@@ -68,3 +68,60 @@ Header .hero_section button{
     background-color: white;
 }
 
+/* Cards Section */
+.cards{
+    padding: 0px 10%;
+}
+.cards h1{
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.cards .grid_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.cards .grid_row .grid_item.up-60{
+    position: relative;
+    bottom: 80px;
+}
+.cards .grid_row .grid_item.up-30{
+    position: relative;
+    bottom: 40px;
+}
+.cards .grid_row .grid_item img{
+    height: 500px;
+    width: 450px;
+    border-radius: 30px;
+}
+.cards .grid_row .grid_item .grid_item_desc{
+    background-color: white;
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 30px;
+    position: relative;
+    top: -50px;
+    display: flex;
+    justify-content: space-between;
+}
+.cards .grid_row .grid_item .grid_item_desc h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.cards .grid_row .grid_item .grid_item_desc p{
+    color: #6663e9;
+    font-size: 18px;
+    font-weight: bold;
+}
+.cards .grid_row .grid_item .grid_item_desc button{
+    background-color: #6663e9;
+    color: white;
+    font-size: 18px;
+    border-radius: 40px;
+    border: none;
+    padding: 15px 35px;
+}
+
