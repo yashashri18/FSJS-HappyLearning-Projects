@@ -234,3 +234,80 @@ Header .hero_section button{
     right: 220px;
 }
 
+/* Subscribe Section */
+.subscribe{
+    margin: 0px 5%;
+    padding: 100px 200px;
+    background-color: #6663e9;
+    color: aliceblue;
+    border-radius: 35px;
+    text-align: center;
+}
+.subscribe h1{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.subscribe>p{
+    margin: auto;
+    width: 60%;
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 50px;
+}
+.subscribe .subscribe_email{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.subscribe .subscribe_email .subscribe_email_bar{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background-color: #4f4dbe;
+    border-radius: 50px;
+    padding: 20px;
+    gap: 15px;
+}
+.subscribe .subscribe_email button{
+    background-color: aliceblue;
+    color: #6663e9;
+    font-size: 18px;
+    border-radius: 40px;
+    border: none;
+    padding: 20px 40px;
+}
+
+
+
+/* Footer */
+Footer{
+    padding: 150px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+Footer .logo_social{
+    width: 20%;
+}
+Footer .logo_social img{
+    margin-bottom: 25px;
+}
+
+Footer .logo_social p{
+    font-size: 16px;
+    line-height: 32px;
+}
+Footer div ul{
+    list-style-type: none;
+}
+Footer div ul li{
+    padding: 15px 0px;
+    font-size: 18px;
+}
+Footer div ul li:first-child{
+    font-weight: bold;
+    font-size: 20px;
+}
