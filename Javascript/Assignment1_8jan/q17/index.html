@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Days in Months </h1>
+    <button onclick="my_fun()">Click here</button>
+    <p id="p1"></p>
+
+    <script>
+        let my_fun = function(){
+            let result = prompt("Enter your month").toLocaleLowerCase()
+            console.log(result)
+            if(result=="january" || result=="march" || result=="may"|| result=="july" || result=="october" || result=="december" || result=="august"){
+                document.getElementById("p1").innerHTML = "31 days" ;
+            }else if(result=="february"){
+                document.getElementById("p1").innerHTML = "28 days in a common year and 29 days in leap years" ;
+            }else if(result=="april" || result=="june" || result=="septembar"|| result=="november"){
+                document.getElementById("p1").innerHTML = "30 days" ;
+            }else{
+                document.getElementById("p1").innerHTML = "Enter month properly" ;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+  

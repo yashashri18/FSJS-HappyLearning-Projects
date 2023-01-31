@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Season Identifier System</h1>
+    <button onclick="my_fun()">Click here</button>
+    <p id="p1"></p>
+
+    <script>
+        let my_fun = function(){
+            let result = prompt("Enter your month").toLocaleLowerCase()
+            console.log(result)
+            if(result=="september" || result=="october" || result=="november"){
+                document.getElementById("p1").innerHTML = "Autumn Season Welcomes you!!" ;
+            }else if(result=="december" || result=="january" || result=="february"){
+                document.getElementById("p1").innerHTML = "Welcome to the season of Cold WINTER!!" ;
+            }else if(result=="march" || result=="ppril" || result=="may"){
+                document.getElementById("p1").innerHTML = "Hello this is SPRING Season!!!" ;
+            }else if(result=="june" || result=="july" || result=="uugust"){
+                document.getElementById("p1").innerHTML = "SUMMER Season it is" ;
+            }
+        }
+    </script>
+</body>
+</html>

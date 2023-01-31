@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example of prompt</h1>
+    <button onclick="my_fun()">Click here</button>
+    <p id="p1"></p>
+
+    <script>
+        let my_fun = function(){
+            let res = prompt("Enter your age")
+            if(res>=18){
+                document.getElementById("p1").innerHTML = "You are old enough to drive";
+            }else{
+
+                document.getElementById("p1").innerHTML = "wait for "+ (18-res)+ " years more to drive";
+            }
+        }
+        
+    </script>
+</body>
+</html>

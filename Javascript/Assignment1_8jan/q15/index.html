@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Grade System</h1>
+    <button onclick="my_fun()">Click here</button>
+    <p id="p1"></p>
+
+    <script>
+        let my_fun = function(){
+            let result = prompt("Enter your marks")
+            if(result>=90 && result<=100){
+                document.getElementById("p1").innerHTML = "Congradulations, Your grade is A";
+            }else if(result>=70 && result<90){
+                document.getElementById("p1").innerHTML = "Congradulations, Your grade is B";
+            }else if(result>=60 && result<70){
+                document.getElementById("p1").innerHTML = "Congradulations, Your grade is C";
+            }else if(result>=50 && result<60){
+                document.getElementById("p1").innerHTML = "Congradulations, Your grade is D";
+            }else{
+                document.getElementById("p1").innerHTML = "Sorry, Your grade is F, BETTER LUCK NEXT TIME";
+            }
+        }
+    </script>
+</body>
+</html>
