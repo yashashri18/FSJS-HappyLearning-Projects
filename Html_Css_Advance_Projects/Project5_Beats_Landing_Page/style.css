@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    background-color: #0f0f10;
+    color: #f2f2f3;  
+}
+
+/* Header Styling */
+header{
+    padding: 50px 20% 0px;    
+}
+/* Header Navbar */
+header .navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+header .navbar .logo{
+    width: 45%;
+}
+header .navbar .menu ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
+header .navbar .shop_btn button{
+    border: none;
+    background-color: #232327;
+    color: white;
+    padding: 15px 40px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* Header Hero Section */
+
+header .hero_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+header .hero_section .hero_section_left{
+    position: relative;
+    top: -100px;
+}
+header .hero_section .hero_section_right{
+    width: 55%;
+}
+header .hero_section .hero_section_right h1{
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+header .hero_section .hero_section_right h4{
+    margin-bottom: 20px;
+}
+header .hero_section .hero_section_right>p{
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 100;
+    color: #dadada;
+    margin-bottom: 40px;
+}
+header .hero_section .hero_section_right>div{
+    display: flex;
+    gap: 10px;
+    background-color:  #232327;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+/* Branding Section */
+
+.brands{
+    padding: 50px 20%;    
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* Specs Section */
+
+.specs_section{
+    padding: 50px 20%; 
+    text-align: center;
+}
+.specs_section>img{
+    margin-bottom: 40px;
+}
+
+.specs_section .specs_section_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.specs_section .specs_section_main .specs_section_left{
+    text-align: left;
+}
+.specs_section .specs_section_main .specs_section_left>div{
+    margin-bottom: 20px;
+}
+.specs_section .specs_section_main .specs_section_left h6{
+    color:  #dadada;
+    padding-top: 10px;
+    font-weight: 100;
+}
+.specs_section .specs_section_main .specs_section_left .bluetooth{
+    position: relative;
+    left: 50px;
+}
+.specs_section .specs_section_main .specs_section_left .battery{
+    position: relative;
+    left: 5px;
+}
+.specs_section .specs_section_main .specs_section_left .mic{
+    position: relative;
+    left: 40px;
+}
+
+/* Case Section */
+.case_section{
+    padding: 50px 35%; 
+    text-align: center;
+}
+.case_section>img{
+    margin-bottom: 40px;
+}
+.case_section .case_section_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.case_section .case_section_main .case_section_right{
+    text-align: left;
+}
+.case_section .case_section_main .case_section_right>p{
+    color:  #dadada;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.case_section .case_section_main .case_section_right>div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: #232327;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius:10px;
+    
+}
+
+/* Buy Now Section */
+.buy_now{
+    text-align: center;
+    background-color: #222222;
+    margin: 50px 20%;
+    padding: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.buy_now .buy_now_left{
+    text-align: left;
+}
+.buy_now .buy_now_left h3{
+    font-size: 28px;
+    font-weight: 100;
+    width: 70%;   
+    margin-bottom: 15px;
+}
+.buy_now .buy_now_left p{
+    color:  #dadada;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+.buy_now .buy_now_left>div{
+    text-align: center;
+    background-color:  #0f0f10;
+    width: 40%;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cards Section */
+.crads_section{
+    padding: 50px 25% 50px; 
+    text-align: center;   
+}
+.crads_section .grid_container{
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
+   
+}
+
+.crads_section .grid_container .grid_item>img{
+    height: 200px;
+}
+.crads_section .grid_container .grid_item>div{
+    background: #222222;
+    padding: 100px 30px 10px;
+    border-radius: 20px;
+    position: relative;
+    top: -100px;
+    z-index: -10;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+.crads_section .grid_container .grid_item>div p{
+    margin-bottom: 10px;
+}
+.crads_section .grid_container .grid_item>div h6{
+    color:  #dadada;
+}
+.crads_section .grid_container .grid_item>div .cart{
+    background-color: #0f0f10;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+
+footer{
+    padding: 50px 20% 50px; 
+    display: flex;  
+    justify-content: space-between; 
+}
+footer ul{
+    list-style-type: none;
+}
+footer ul li{
+    padding: 10px 0px;
+    color:#dadada;
+}
+footer ul li:first-child{
+    font-size: 18px;
+    columns: white;
+}
+
+footer div:last-child>div{
+    display: flex;
+    background-color: #222222;
+    padding: 10px;
+    border-radius: 15px;
+    gap: 120px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer div:last-child>div>div{
+    display: flex;
+    background-color: #0f0f10;
+    padding: 15px 10px;
+    gap: 10px;
+    border-radius: 10px;
+}
+footer div:last-child section{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+
+
+
