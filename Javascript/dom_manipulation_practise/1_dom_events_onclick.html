@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_events</title>
+</head>
+<body>
+    <!-- method 1 : using inline -->
+    <button id="btn1" onclick="btnClick()">Click Me</button>
+    <!-- method 2 : using Event Listerner -->
+    <button id="btn2">Click Me</button>
+    <!-- method 3 : using Event Listerner + anonymousn fn-->
+    <button id="btn3">Click Me</button>
+    <script>
+
+        //method 1 - inline
+        function btnClick(){
+            alert("Btn was clicked !");
+        }
+
+        //method 2 - using EventListener  + defining function
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener('click',btnClick);
+
+        //method 3 - using eventListener + anonymous function
+        let btn3 = document.getElementById("btn3");
+        btn3.addEventListener('click',function(){
+            console.log("btn was clicked");
+        });
+
+        //we can register multiple event listener on the same element
+        btn3.addEventListener('mouseover',function(){
+            console.log("mouseover is activated");
+        });
+
+        btn3.addEventListener('mouseout',function(){
+            console.log("mouseout is activated");
+        });
+
+    </script>
+</body>
+</html>
