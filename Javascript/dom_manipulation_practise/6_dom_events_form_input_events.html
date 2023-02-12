@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Elements</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="myInput">
+    </form>
+
+
+    <script>
+        let x = document.getElementById("myInput");
+        console.log(x);
+
+        //focus - detect focus state  - when user clicks into input
+        x.addEventListener('focus', myFocusFunction);
+
+        //blur - detect blur state  - when user clicks outof input type
+        x.addEventListener('blur', myBlurFunction);
+
+        //change - detect change in input type value - triggers only when there is chnage in value   
+        x.addEventListener('change', function(){
+            console.log(this.value)
+        });
+
+        //input - detect change in input type value in parallel  
+        x.addEventListener('input', function(){
+            console.log(this.value)
+        });
+
+        
+
+
+        function myFocusFunction(){
+            console.log('clicked inside');
+            x.style.background = "yellow";
+        }
+        function myBlurFunction(){
+            console.log('clicked outside');
+            x.style.background = "white";
+        }
+
+    </script>
+</body>
+</html>

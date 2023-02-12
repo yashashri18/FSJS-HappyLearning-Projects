@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bom in js</title>
+</head>
+<body>
+    
+    <script>
+
+        // BOM (Browser Object Model)
+
+        // -->the window object represents a window in browser
+        // -->the object of window is created automatically by the browser
+        // -->all global JS objects, functions and variables with the variables
+        // with the var keyword automatically become members of the window object
+        // --> Global variables are properties of the window object
+        // --> Global functions are methods of the window object.
+
+        var z = "abcd";
+        console.log(z); //abcd
+        console.log(window.z) //abcd
+
+        let x = "hi"
+        console.log(window.x) //undefined - as it will only consider variables declared with var keyword
+
+        function xyz(){
+            console.log("hi...")
+        }
+
+        xyz(); 
+        window.xyz(); //this will also work , as the function is the member of window object
+
+        //alert, confirm , prompt are also methods of window object
+        //alert("hi from alert");
+        window.alert("hi from window alert");
+        
+    </script>
+</body>
+</html>

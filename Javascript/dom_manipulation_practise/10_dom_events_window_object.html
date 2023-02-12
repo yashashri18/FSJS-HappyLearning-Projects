@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window object</title>
+</head>
+<body>
+
+    <button id="btn1">Google</button>
+    <button id="btn2">Yahoo</button>
+    <button id="btn3">Close Window</button>
+    <script>
+        //innerheight , innerwidth - height and width of display are 
+        // console.log(window.innerHeight);
+        // console.log(window.innerWidth);
+        //outerheight , outerwidth - height and width of browser window (considers head, bar, actual area, inspect element ,and all)
+        // console.log(window.outerHeight);
+        // console.log(window.outerWidth);
+
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let url = "https://www.google.com";
+        let features = "height=500,width=500";
+        let win;
+
+        btn1.addEventListener('click',function(){
+            //syntax - window.open(url,name,features);
+            //url - the url to which we want to open new window
+            //name - to access the window with name , we can use name to close the window
+            //features - properties like height, width, etc
+            win = window.open(url,'google',features);
+        });
+        btn2.addEventListener('click',function(){
+            //it opens the yahoo url in same window named - google
+            window.open("https://www.yahoo.com",'google');
+        });
+        btn3.addEventListener('click',function(){
+            win.close()
+        });
+
+        
+    </script>
+</body>
+</html>

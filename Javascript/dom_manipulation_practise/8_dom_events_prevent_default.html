@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default</title>
+</head>
+<body>
+    <a href="https://wwww.google.com" id="anchor">Click me </a>
+
+    <form action="" id="myform">
+        <input type="text">
+        <input type="submit">
+    </form>
+
+    <script>
+
+        //by using this method , we can stop the default behaviour of elements
+        //when we click on anchor tag , ideally it should redirect to google , but we can prevent it using preventDefault()
+
+        let link = document.getElementById("anchor");
+
+        link.addEventListener('click',function(event){
+            console.log("anchor tag is clicked");
+            event.preventDefault();
+        });
+
+        //we can prevent direct submit of form 
+        let form = document.getElementById("myform");
+
+        form.addEventListener('submit',function(event){
+            console.log("submit button is clicked");
+            event.preventDefault();
+        });
+
+    </script>
+</body>
+</html>

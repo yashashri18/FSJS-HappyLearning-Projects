@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Event Capturing</title>
+    <style>
+        body{
+            padding: 100px;
+            background-color: cornsilk;
+        }
+        #myDiv{
+            padding: 50px;
+            background-color: darkblue;
+        }
+    </style>
+
+</head>
+<body>
+   <div id="myDiv">
+    <button id="btn">Click me</button>
+   </div>
+
+   <script>
+    let d = document.getElementById("myDiv");
+    let b = document.getElementById("btn");
+
+    function btnClicked(){
+        console.log("btn is clicked")
+    }
+    function divClicked(){
+        console.log("div is clicked")
+    }
+    function bodyClicked(){
+        console.log("body is clicked")
+    }
+    //case 1 - Event Bubbling - bydeafault the UseCapture is set to false , hence the order of execution will be btn->div->body
+
+    b.addEventListener('click',btnClicked);
+    d.addEventListener('click',divClicked);
+    document.body.addEventListener('click',bodyClicked);
+    //output -> btn->div->body
+
+    //case2 - event Capturing
+    // b.addEventListener('click',btnClicked,true);
+    // d.addEventListener('click',divClicked,true);
+    // document.body.addEventListener('click',bodyClicked,true);
+    //output -> body->div->btn
+
+
+    //case3 - 
+    // b.addEventListener('click',btnClicked,true);
+    // d.addEventListener('click',divClicked,true);
+    // document.body.addEventListener('click',bodyClicked);
+    //output - div->btn->body
+
+    //case4 - 
+    // b.addEventListener('click',btnClicked,true);
+    // d.addEventListener('click',divClicked);
+    // document.body.addEventListener('click',bodyClicked);
+    //output - btn->div->body
+
+    //Conclusion - either set value to all or don't set it to any
+    //if we give true to few of elements, it will not render in order    
+
+    
+   </script>
+</body>
+</html>

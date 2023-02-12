@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Events</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1>Heelo</h1>
+    <script>
+        //on scroll
+        window.addEventListener('scroll',function(){
+            console.log('scrolling started....');
+        });
+
+        //wheel - scroll vertical : deltaY, scroll horizontal : deltaX 
+        // window.addEventListener('wheel',function(event){
+        //     if(event.deltaY < 0){
+        //         console.log('scrolling up....');
+        //     }else{
+        //         console.log('scrolling down....');
+        //     }    
+        // });
+
+        //fire event - when user reached 500px down while scrolling
+        // window.addEventListener('scroll',function(){
+        //     if(window.pageYOffset>350){
+        //         console.log("you crossed scrolling 350px")
+        //     }else{
+        //         console.log('you are scrolling page ...');
+        //     }    
+        // });
+
+
+    </script>
+</body>
+</html>
