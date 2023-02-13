@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object</title>
+</head>
+<body>
+    <button id="btn" onclick="fun()">Click me</button>
+    <button id="btn2" onclick="reload()">Reload</button>
+    
+    <script>
+
+        //location object properties
+        console.log(window.location.href);
+        console.log(location.href);
+        console.log(location.pathname);
+        console.log(location.protocol);
+
+
+        //location object methods
+        function fun(){
+            //when we use window.location or location.href , assign method is called internally
+            window.location = "https://www.google.com";
+            //location.href = "https://www.google.com";
+
+            //using assign method
+            //location.assign("https://www.google.com");
+
+            //assign methods - the url is now antered in history of browers 
+            //to avoid it getting into browser history's entry , use replace method
+            //now we can see the browers back btn is disabled 
+            //location.replace("https://www.google.com");
+        }
+
+        //this fun is used to reload the page
+        function reload(){
+            //location.reload();
+        }
+    </script>
+</body>
+</html>

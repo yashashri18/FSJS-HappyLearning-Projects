@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut/TimeInterval</title>
+</head>
+<body>
+
+    <button id ="btn">Clear Interval</button>
+    <script>
+
+        //eg - 1 ->SetTimeout -> will execute only once after a given time
+        let timeoutId = setTimeout(myfunction, 1000);
+        function myfunction(){
+            console.log("the fun is executing after 5 seconds");
+        }
+        //now to stop the setTimeout fn , we can use the timeoutId id
+        //clearTimeout(timeoutId);
+
+        //eg - 1 ->SetInterval -> will execute continuous after a given time
+        let int = setInterval(fun, 1000);
+        function fun(){
+            console.log("run after each 1 sec");
+        }
+        //now to stop the setInterval fn , we can use the timeoutId id
+        let btn = document.getElementById("btn");
+        btn.addEventListener('click',function(){
+            console.log("stop btn is clicked");
+            clearInterval(int);
+        });
+
+
+    </script>
+</body>
+</html
