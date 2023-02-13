@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #btn{
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        .color{
+            background-color: rgb(219, 203, 203);
+            color: blue;
+        }
+        .dim{
+            border: 1px solid red;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <ul>
+        <li class="cl pi">List 1</li>
+        <li id="first">List 2</li>
+        <li class="cl">List 3</li>
+    </ul>
+    <h2 class="intro">Heading 1</h2>
+    <div id="div1">
+        <p class="intro">Paragraph 1</p>
+        <h2 class="intro">Heading 2</h2>
+        <p>Paragraph 2</p>
+        <h2>Heading 3</h2>
+        <p class="intro">Paragraph 3</p>
+    </div> -->
+
+    <script>
+        //---------get any element by id----------
+        // let elm = document.getElementById("first");
+        // console.log(elm);
+
+        //manipulating - to change text/html inside element
+        // let elm = document.getElementById("first");
+        // elm.innerHTML = "<p>Hello</p>"
+
+        //----------select multiple elements by class---------
+        //let elm = document.getElementsByClassName("cl");
+        // it will return collection of values
+        // console.log(elm.length);
+        // console.log(elm);
+        // for(let i=0;i<elm.length;i++){
+        //     elm[i].innerHTML = "<p>Hello</p>"
+        // }
+
+        //passing multiple classnames
+        // let elm = document.getElementsByClassName("cl pi");
+        // console.log(elm);
+
+
+        //----------select multiple elements by tag---------
+        
+        //to select all h2 elements
+        // let elm = document.getElementsByTagName("h2");
+        // for(let i=0;i<elm.length;i++){
+        //      elm[i].innerHTML = "chaning h2 title"
+        //  }
+
+        //to select all h2 elements that are inside div with id=div1
+        
+        // let div1 = document.getElementById("div1")
+        // let elm = div1.getElementsByTagName("h2");
+        // for(let i=0;i<elm.length;i++){
+        //      elm[i].innerHTML = "chaning h2 title"
+        //  }
+
+
+        //------------Query selector------------
+
+        //returns one element
+        // let elm = document.querySelector("p.intro");
+        // elm.innerHTML = "hello";
+
+        //returns all elements
+        // let elm = document.querySelectorAll("p.intro");
+        // for(let i=0;i<elm.length;i++){
+        //     elm[i].innerHTML = "chaning h2 title"
+        // }
+
+    </script>
+
+
+    <!-- <h2>Heading 1</h2>
+    <ul>
+        <li>list 1</li>
+        <li id="intro">list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <ul id="intro2">
+        <li>list a</li>
+        <li>list b</li>
+        <li>list c</li>
+        <li>list d</li>
+    </ul> -->
+    
+
+    <script>
+         //------------Traversing elememts------------
+         //from child to parent
+         //let elm = document.getElementById("intro");
+         //let prt = elm.parentElement;
+         //prt.innerHTML="hello"
+         //console.log(prt)
+
+         //from parent to child
+         //let elm2 = document.getElementById("intro2");
+         //first child element
+         //let node = elm2.firstElementChild;
+         //last child element
+         //let node = elm2.lastElementChild;
+         //select all child elements
+         //let node = elm2.children;
+         // console.log(node)
+
+
+        // let elm = document.getElementById("intro");
+        //get previous siblings
+        //let node = elm.previousElementSibling;
+        //get next siblings
+        // let node = elm.nextElementSibling;
+        // console.log(node)
+
+    </script>
+
+
+    <!-- *******Update or get html inside element******-->
+
+    <!-- <div id="intro">
+        <p>Hello this is a p tag</p>
+    </div> -->
+
+    <script>
+        // let elm = document.getElementById("intro");
+        // //to get inner html
+        // //let content = elm.innerHTML;
+        // //to set inner html
+        // elm.innerHTML = "<h1>This is a heading</h1>"
+        // console.log(content)
+
+    </script>
+
+    <!-- ****** create / append element in js ***** -->
+
+<!-- 
+    <div id="intro">
+        <p id="p1">Hello this is a p tag</p>
+    </div> -->
+
+    <script>
+        // let elm = document.getElementById("intro");
+        // let elemt = document.createElement('h1');
+        // elemt.className = "testclass";
+        // elemt.id = "testid";
+        //method 1 of adding text
+        //let text = document.createTextNode("this is a way of heading");
+        //elemt.appendChild(text)
+        //method 2 of adding text
+        //elemt.textContent = "this is another way of adding content";
+        //elm.appendChild(elemt)
+
+
+        //raed the content in p tag
+        // let pra = document.getElementById("p1");
+        // console.log(pra.textContent);
+    </script>
+
+
+
+    <!-- ------------ Insert before an element---------  -->
+
+    <!-- <ul id="list">
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+    </ul> -->
+
+    <script>
+        //eg - 1 - adding before one of the list item 
+        // let list1 = document.getElementById("list"); //parent
+
+        // //create new item
+        // let item = document.createElement("li");
+        // item.textContent="new List item";
+
+        // //now select some pos , befire which we want to insert
+
+        // let pos = list1.firstElementChild.nextElementSibling.nextElementSibling;
+
+        // //insert before
+        // list1.insertBefore(item,pos);
+
+
+        //eg -2 - adding before any element in body
+        //  let parent = document.body //parent
+
+        //create new item
+        // let elm = document.createElement("h2");
+        // elm.textContent="new heading 2";
+
+        // //now select some pos , befire which we want to insert
+
+        // let pos =  document.getElementById("list")
+
+        // //insert before
+        // parent.insertBefore(elm,pos);
+
+    </script>
+
+    
+
+    <!-- <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About Us</li>
+        <li>Contact</li>
+    </ul> -->
+
+    <script>
+        // ---------------Remove Child Element-------------
+        //eg 1 - remove product from list
+        // let parent = document.getElementById("menu");
+        // let elm = parent.firstElementChild.nextElementSibling;
+        // parent.removeChild(elm);
+
+        //eg 2 - remove whole list from body
+        // let parent = document.getElementById("menu");
+        // document.body.removeChild(parent);
+
+
+        //----------------Clone/ Copy Element--------------
+
+        //eg 1 -
+        //first select the element which we want to duplicate
+        // let menu = document.getElementById("menu");
+        // //true - it will copy child elements also , false - it will not copy child elements
+        // let cloneElm = menu.cloneNode(true);
+        // console.log(cloneElm);
+        // //now we will append the created clone element
+        // document.body.appendChild(cloneElm)
+        // //change the id of second cloned list
+        // cloneElm.id="mobilemenu"
+
+        //----------------Replace Element-------------------
+        //select parent
+        // let parent = document.getElementById("menu");
+        // //create item that we want to replace
+        // let item = document.createElement("li");
+        // item.textContent = "new item that is going to replace Product";
+        // //select which element we want to repalce
+        // let replace = parent.firstElementChild.nextElementSibling;
+        // console.log(replace);
+        // //now replace
+        // parent.replaceChild(item,replace);
+    </script>
+    
+    <!-------------- Inset Adjacent Html - we can insert html at 4 positions ---------------->
+    <!-- The positions are beforebegin , after begin, before end , after end -->
+
+    <!-- lets consider div as a taeget element -->
+    <!-- beforebegin -->
+    <!-- <div id="intro"> -->
+        <!-- afterbegin -->
+        <!-- <h2>Heading</h2> -->
+        <!-- <p>This is a p tag</p> -->
+        <!-- beforeend -->
+    <!-- </div> -->
+    <!-- afterend -->
+
+    <script>
+        // //first select the element
+        // let elm = document.getElementById("intro");
+        // let html = "<h1>new h1</h1>";
+        //elm.insertAdjacentHTML("beforebegin", html);
+        //elm.insertAdjacentHTML("afterbegin", html);
+        //elm.insertAdjacentHTML("afterend", html);
+        //elm.insertAdjacentHTML("beforeend", html);
+    </script>
+
+    <!-- <button id="btn" style="color:blue" name="form1">Send</button> -->
+
+    <script>
+
+        //-------------- check/Get/Set/Remove Attribute in JS --------
+
+        //select the element
+        // let btn = document.getElementById("btn");
+        // //now set attribute - pass two parameters name and value
+        // btn.setAttribute("class","btn_primary");
+
+        // //get attribute
+        // let val = btn.getAttribute("name");
+        // console.log(val);
+
+        // //has attribute or not - returns true or false
+        // let hasornot = btn.hasAttribute("name--");
+        // console.log(hasornot);
+
+        // //to remove attribute
+        // btn.removeAttribute("name");
+
+       // ------------Manipulating Inline Styling----------------------------
+
+       //let btn = document.getElementById("btn");
+       //the cssText property overrides the old css properties if there are any
+       //btn.style.cssText = "background-color:red;color:white;border:none;";
+       //to concatinate with the prev styles , use concat operator
+       //btn.style.cssText += "background-color:red;color:white;border:none;";
+       //the same we can achieve via set attribue also
+       //btn.setAttribute("style","background-color:red;color:white;border:none;");
+       //one more method to achieve style
+       //btn.style.color = "white";
+       //btn.style.backgroundColor = "red";
+       //btn.style.border = "none";
+
+
+       //---------------Get computed css-----------------
+    //    let btn = document.getElementById("btn");
+    //    let css = getComputedStyle(btn);
+    //    console.log(css)
+    //    console.log(css.color)
+    //    console.log(css.border)
+
+
+    </script>
+
+
+    <!-- ------------------------Chnage Css Classes using JS--------------------- -->
+    <!-- <div id="box" class="color dim">
+        <p>This is a dummy text</p>
+    </div> -->
+
+    <script>
+        //to check what classes are present on element
+        // let box = document.getElementById("box");
+        // console.log(box.className)
+        // box.className +=" dim";
+        
+        // //classList - it returns a list of classes
+        // console.log(box.classList)
+        // //traverse over the list of arrays
+        // for(let css of box.classList){
+        //     console.log(css)
+        // }
+
+        // //adding new class
+        // box.classList.add("dim2");
+        // box.classList.add("dim3");
+
+        // //removing class
+        // box.classList.remove("dim2");
+
+        // //replacing class
+        // box.classList.replace("dim3","dim4");
+
+        // //check if class is available
+        // let result = box.classList.contains("dim4");
+        // console.log(result);
+
+        // //toggle - if class is there then remove it , if it is not there add it
+        // box.classList.toggle("dim4");
+
+
+        //-----------------To get the height and width of elements --------------------
+        // let box = document.getElementById("box");
+        // //let width = box.offsetWidth;
+        // //let height = box.offsetHeight;
+        // let width = box.clientWidth;
+        // let height = box.clientHeight;
+        // console.log(width,height);
+
+    </script>
+
+    <!-- ---------------------Dom Events---------------  -->
+
+
+    
+
+
+
+</body>
+</html>
