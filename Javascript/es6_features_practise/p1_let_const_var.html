@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let,Const,Var</title>
+</head>
+<body>
+    <h1>Learning var, let and const</h1>
+
+    <script>
+
+        //point 1 - connection with global objects eg - window object
+
+        var count = 1;
+        let count2 = 2;
+        console.log(count)//1
+        console.log(count2)//2
+        
+        //if we declare variable using var , it becomes the property of window object , ie global object
+        //but this is not the case with let
+
+        console.log(window.count)//1
+        console.log(window.count2) //undefined
+
+
+        //point 2 - Redeclaration
+
+        //redeclaration is allowed in var
+        var ab = 3;
+        var ab;
+        console.log(ab)
+
+        //redeclaration is not allowed in let
+
+        let cd = 4;
+        //let cd; //error in console - Identifier 'cd' has already been declared 
+        console.log(cd)
+
+
+        //Constant - one defined , value can not be chnaged
+
+        const p = 10;
+        p=11; //error - Assignment to constant variable.
+        console.log(p)
+    </script>
+</body>
+</html>
