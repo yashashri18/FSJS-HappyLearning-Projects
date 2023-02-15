@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+</head>
+<body>
+    <script>
+
+        
+        //template literal uses backticks to create string
+
+        //1. creating strings with multiple lines is easy using string literals
+        let str = "hello \n world"; 
+        //wrting \n is not requirred in template literal
+        let str2 = `hello 
+world`;
+
+        console.log(str);
+        console.log(str2);
+
+        //2. string concatination is easy 
+        let myname = "Yashashri";
+        console.log(`My name is ${myname} .Thank you`)
+        //3. Evaluation is also done 
+        console.log(`My name is ${myname} .Thank you ${10*10} times`)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    
+    <script>
+    //Rest operator - gathers all into an array - eg rest parameters in function
+    //Spread operator - to spread iterable objects like array
+
+    let array1 = [1,2,3,4]
+
+    let array2 = [5,6,7,...array1]
+    console.log(array2)
+    let array3 = [...array1,5,6,7]
+    console.log(array3)
+    let array4 = [5,6,...array1,7,8]
+    console.log(array4)
+
+    //we also can add two arrays
+    let array5 = [...array1,...array2]
+    console.log(array5)
+
+   
+    </script>
+</body>
+</html>
