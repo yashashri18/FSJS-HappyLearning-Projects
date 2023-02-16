@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+<body>
+    <script>
+        let book = {
+            name : 'Advance Js',
+            page : 200,
+            price : 150
+        };
+        //let name = book.name;
+        //console.log(name);
+
+        //the aoove task of accessing values is done using object destructuring
+
+        let{name : title,page,price=200,test} = book;
+        console.log(title);
+        console.log(page);
+        console.log(price);
+        console.log(test);
+       
+
+        //objects can also be nested
+        let book2 = {
+            name1 : 'Advance Js',
+            page1 : 200,
+            price1 : 150,
+
+            publication : {
+                year:2021,
+                type:'popular'
+            }
+        };
+        let{name1,page1,price1=200,publication :{year,type}} = book2;
+        console.log(name1);
+        console.log(page1);
+        console.log(price1);
+        console.log(year);
+        console.log(type);
+
+    </script>
+</body>
+</html>

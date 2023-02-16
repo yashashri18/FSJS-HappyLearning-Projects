@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array D</title>
+</head>
+<body>
+    <script>
+        //if we want to extract array values in variables  in single line
+
+        let book = ["book1","book2","book3","book4"]
+        let [b1,b2,b3,b4,b5] = book;
+        console.log(b1)
+        console.log(b2)
+        console.log(b3)
+        console.log(b4)
+        console.log(b5)//undefined
+
+        let [a1,,a3,a4] = book;
+        console.log(a1)
+        console.log(a3)
+        console.log(a4)
+
+        let carray = ["cook1", ,600,680];
+        let [c1,c2,c3] = carray
+        console.log(c2) //undefined
+        //hence we can also give default value 
+        let [d1,d2=500,d3] = carray
+        console.log(d2)
+
+        //with nested array
+
+        let a = ["abd",100,200,[2019,"hello"]];
+        let [name,page,price,[year,author]] = a;
+        console.log(year);
+        console.log(author)
+
+        //use case
+
+        function book1(){
+            return ["book_name",'200'];
+        }
+        let [bk_nm, bk_price] = book1();
+        console.log(bk_nm);
+        console.log(bk_price)
+
+    </script>
+</body>
+</html>
