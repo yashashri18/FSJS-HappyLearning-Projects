@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f8;
+   
+}
+
+.heading{
+    width: 100%;
+    padding: 30px;
+    background-color:#88abff;
+    color: #282936;
+    box-shadow: 10px 10px 16px rgb(180 194 243);
+    text-align: left;
+}
+.heading i{
+    margin-right: 10px;
+}
+.add-box{
+    margin: 50px auto;
+    background: #88acff26;
+    padding: 50px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 30%;
+}
+@media only screen and (max-width: 600px)  {
+    .add-box{
+        width: 70%;
+        padding: 30px 50px;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px)  {
+    .add-box{
+        width: 50%;
+        padding: 30px 50px;
+    }
+}
+@media only screen and (min-width: 901px) and (max-width: 1400px)  {
+    .add-box{
+        width: 40%;
+        
+    }
+}
+
+
+.add-box .icon{
+    height: 78px;
+    width: 78px;
+    color: #88abff;
+    font-size: 40px;
+    border-radius: 50%;
+    border: 2px dashed #88abff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.notes{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 265px);
+    margin: 0px 5%;
+    justify-content: space-around;
+}
+
+.notes .operation{
+    border-radius: 20px;
+    padding: 20px;
+    background: #88acff26;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.notes .operation textarea{
+    min-height: 150px;
+    max-height: 150px;
+    overflow: scroll;
+    margin-bottom: 20px;
+    border: none;
+    background: #88acff76;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+.notes .operation .main{
+    min-height: 150px;
+    max-height: 150px;
+    overflow: scroll;
+    margin-bottom: 20px;
+    border: none;
+    background: #88acff76;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.notes .operation .btn-group button{
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.notes .operation .btn-group button.edit{
+    background-color: rgba(13, 134, 13, 0.285);
+}
+.notes .operation .btn-group button.delete{
+    background-color: rgba(208, 26, 26, 0.444);
+}
+
+.notes .operation .hidden{
+    display: none;
+}
+
