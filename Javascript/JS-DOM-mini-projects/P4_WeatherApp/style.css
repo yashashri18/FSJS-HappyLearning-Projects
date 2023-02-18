@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+  width:100%;
+  text-align: center;
+  background-image: linear-gradient(#a7d9f2, #1f90c8) !important; 
+  color: white;
+  height: 100vh;
+
+}
+.container h1{
+  background-color: #005986;
+  padding: 30px;
+}
+.container form input::placeholder{
+  color: white;
+}
+.container form{
+  padding: 30px;
+  background-color: #00000014;
+  width: 40%;
+  margin: 20px auto;
+  border-radius: 20px;
+  display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+@media only screen and (max-width: 500px) {
+  .container form{
+    width: 80%;
+    padding: 10px;
+  }  
+}
+@media only screen and (min-width: 501px) and (max-width: 1000px){
+  .container form{
+    width: 80%;
+    padding: 10px;
+  }  
+}
+.container form input,.container form button{
+  border: none;
+  background-color: #6591a7ce;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-size: 18px;
+}
+.container form button img{
+  height: 25px;
+}
+@media only screen and (max-width: 500px) {
+  .container form button{
+    padding: 5px;
+    border-radius: 15px;
+  }
+  .container form button img{
+    height: 15px;
+  }
+}
+.container form input:active , 
+.container form input:focus, 
+.container form input:focus-visible {
+  outline: none;
+}
+
+
+/* Place Deatils */
+.container .cityWeatherData .countryDetails,
+.container .cityWeatherData .weatherDetails
+{
+  display: flex;
+  width: 40%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 500px) {
+  .container .cityWeatherData .countryDetails,
+  .container .cityWeatherData .weatherDetails{
+    display: unset;
+  }
+}
+.container .cityWeatherData .countryDetails .card,
+.container .cityWeatherData .weatherDetails .card
+{
+  background:#00000014;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+}
+.container .cityWeatherData .countryDetails .card:hover,
+.container .cityWeatherData .weatherDetails .card:hover { 
+  transform: scale(1.1); 
+  
+}
+
+.container .cityWeatherData .countryDetails .card p:first-child,
+.container .cityWeatherData .weatherDetails .card p:first-child{
+  margin-bottom: 10px;
+  font-size: 20px;
+
+}
+.container .cityWeatherData .countryDetails .card p:nth-child(2),
+.container .cityWeatherData .weatherDetails .card p:nth-child(2){
+  font-size: 22px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 500px) {
+  .container .cityWeatherData .countryDetails .card,
+.container .cityWeatherData .weatherDetails .card{
+  width: 70%;
+  margin: 20px auto;
+}
+}
+
+
+
