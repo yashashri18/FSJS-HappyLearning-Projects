@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Learning Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 5px solid black;
+            padding: 10px;
+            margin: 20px;
+
+        }
+        .red{
+            background-color: red;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+    </style>
+
+    <script>
+
+        //we need to use document.ready so that the script will execute at the end
+
+        // $(document).ready(function(){
+        //     //now this fn will execute when the document is loaded fully
+        //     $("#colored-div").hover(function(){
+        //         $("#para").hide();
+        //     },
+        //     function(){
+        //         $("#para").show();
+        //     });
+        // });
+        
+
+        //Shortcut for above 
+
+        // $(function(){
+        //     //now this fn will execute when the document is loaded fully
+        //     $("#colored-div").hover(function(){
+        //         $("#para").hide();
+        //     },
+        //     function(){
+        //         $("#para").show();
+        //     });
+        // });
+
+        
+    </script>
+</head>
+<body>
+
+    <!-- Selectors In Css -->
+    <!-- <p id="para">This is p1</p>
+    <p class="black">This is p2</p>
+    <p class="black">This is p3</p>
+    <a href="#">Link</a> -->
+
+    <script>
+
+        // ******Jquery Selectors*******
+
+        // tag selector
+        //$("p").hide();
+
+        // id selector
+        // $("#para").hide();
+
+        //class selector
+        // $(".black").hide();
+
+        //Universal Selector
+        // $("*").hide();
+
+        //combined Selectors
+        //$("p.black").hide();
+
+        //this Selector - whatever the current element is , in context of that
+        //$("this").hide();
+
+
+        //Note - All types of Css Selectors are applicable here
+
+        // ******Jquery Events*******
+
+
+    </script>
+
+
+    <!-- Learning Events  -->
+
+    <!-- <p id="para">This is a p tag</p>
+    <button id="btn">Click</button>
+    <br><br>
+    <div id="colored-div" style="background-color: brown;height: 100px;width: 100px;"></div> -->
+
+
+    <script>
+        // on click of button , hide the paragraph
+        // $("#btn").click(function(){
+        //     $("#para").hide();
+        // });
+
+        //on click of button , hide the button itself
+        // $("#btn").click(function(){
+        //     $(this).hide();
+        // });
+
+        //on double click of button , hide the button itself
+        // $("#btn").dblclick(function(){
+        //     $(this).hide();
+        // });
+
+        //MouseEnter and MouseLeave Events
+        // $("#colored-div").mouseenter(function(){
+        //      $("#para").hide();
+        // });
+
+        // $("#colored-div").mouseleave(function(){
+        //      $("#para").hide();
+        // });
+
+
+        //Hover we need to define two functions , for  mouseenter and  mouseleave
+        // $("#colored-div").hover(function(){
+        //     $("#para").hide();
+        // },
+        // function(){
+        //     $("#para").show();
+        // });
+
+
+        //On Function - if we want to add multiple events on single selector
+
+        // $("table.planning_grid td").on({
+        //     mouseenter:function(){  
+        //         $(this).css("background-color","yellow");
+        //     },
+        //     mouseleave:function(){ 
+        //         $(this).css("background-color","pink");
+        //     },
+        //     click:function(){ 
+        //         $(this).css("background-color","red");
+        //     }
+        // });
+    </script>
+
+
+      <!-- Learning Effects  -->
+      <!-- <p id="para">This is a p tag</p>
+      <button id="btn1">Button 1</button>
+      <button id="btn2">Button 2</button>
+      <br>
+      <br>
+      <div id="colored-div" style="background-color: brown;height: 100px;width: 100px;"></div>  -->
+
+
+      <script>
+        //hide in 1 sec time
+        // $("#btn1").click(function(){
+        //     $("#colored-div").hide(1000);
+        // });
+        //show in 2 sec time
+        // $("#btn2").click(function(){
+        //     $("#colored-div").show(2000);
+        // });
+
+        //fadeIn , fadeout effect
+        // $("#btn1").click(function(){
+        //     $("#colored-div").fadeOut(1000);
+        // });
+        // $("#btn2").click(function(){
+        //     $("#colored-div").fadeIn(2000);
+        // });
+
+        //Tiggle = fadeOut + fadeIn
+        // $("#btn1").click(function(){
+        //     $("#colored-div").fadeToggle(1000);
+        // });
+
+        //FadeTo - with opacity
+        // $("#btn1").click(function(){
+        //      $("#colored-div").fadeTo(1000, 0.5);
+        // });
+
+
+        //sliding effect
+        // $("#btn1").click(function(){
+        //      $("#colored-div").slideUp(1000);
+        // });
+        // $("#btn2").click(function(){
+        //      $("#colored-div").slideDown(1000);
+        // });
+
+        //Sliding up down togggle effect
+        // $("#btn1").click(function(){
+        //      $("#colored-div").slideToggle(1000);
+        // });
+
+
+        //Animation Effect - gining multiple css properties
+        // $("#btn1").click(function(){
+        //     $("#colored-div").animate({
+        //         opacity:'0.5',
+        //         height:'200px',
+        //         width: '200px',
+        //     },5000);
+        // });
+
+
+        //Stoping an event in between
+        // $("#btn2").click(function(){
+        //     $("#colored-div").stop();
+        // });
+
+
+        //Callback Function
+        // $("#btn1").click(function(){
+        //     $("#colored-div").hide(3000,function(){
+        //         alert("this action will be performed once the div is hidden");
+        //     });
+        // });
+
+
+        // Chaining - apply multiple effects , one after another
+        // $("#btn1").click(function(){
+        //     $("#colored-div").css("background-color","red").slideUp(2000).slideDown(2000);
+        // });
+
+      </script>
+
+      <!-- ***************Manipulating Html**************** -->
+<!-- 
+    <p id="para">This is a p tag</p>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <br>
+    <br>
+    <div id="colored-div" style="background-color: rgb(81, 233, 91);height: 100px;width: 100px;">
+        <p>This is a p tag <a href="###_###" id="link" class="red">Link</a></p>
+    </div>  
+    
+    <input type="text" id="input1"> -->
+
+    
+    <script>
+        // text function excludes all the html tags 
+        // $("#btn1").click(function(){
+        //     var txt = $("#colored-div").text();
+        //     alert(txt);
+        // });
+
+        //to get html 
+        // $("#btn1").click(function(){
+        //     var txt = $("#colored-div").html();
+        //     alert(txt);
+        // });
+
+        //to set html content
+        // $("#btn1").click(function(){
+        //     $("#colored-div").html("<h1>This is html</h1>");
+        // });
+
+        //to set text 
+        // $("#btn1").click(function(){
+        //     $("#colored-div").text("This is html");
+        // });
+
+
+        //to get the value in input types
+        // $("#btn1").click(function(){
+        //     var value = $("#input1").val();
+        //     alert(value);
+        // });
+
+        //to set the value in input types
+        // $("#btn1").click(function(){
+        //     $("#input1").val("I am Yashashri");
+        // });
+
+        //To get and set attribute  eg - type="text", id="myid", href="#"
+        // $("#btn1").click(function(){
+        //     var value = $("#link").attr("href");
+        //     alert(value);
+        // });
+        // $("#btn1").click(function(){
+        //     $("#link").attr("href","https://google.com");
+        // });
+
+
+        // $("#btn1").click(function(){
+        //     $("#link").attr({
+        //         "href":"https://google.com",
+        //         "class":"black",
+        //     });
+        // });
+
+    </script>
+
+
+    <!--************** Add / Remove elements ************* -->
+    <!-- <ul id="list">
+        <li>Red</li>
+        <li>Black</li>
+        <li>Green</li>
+    </ul> -->
+
+    <script>
+
+        // we can add at these positions - append, prepend, after , before
+
+        // $("#list").append("<li>Yellow(appends)</li>")
+        // $("#list").prepend("<li>Blue(prepends)</li>")
+        // $("#list").after("<p>After(pafter)</p>")
+        // $("#list").before("<p>Before(before)</p>")
+
+        //$("#list").empty();
+        //$("#list").remove();
+
+
+    </script>
+
+    <!-- *************** Manipulating Classes ************** -->
+
+    <!-- <div id="box" class="box red"></div>
+    <button id="btn">Click here</button> -->
+
+    
+    <script>
+        //Adding Clas
+        // $("#btn").click(function(){
+        //     $("#box").addClass("circle")
+        // });
+        //Removing Class 
+        // $("#btn").click(function(){
+        //     $("#box").removeClass("red")
+        // });
+
+        //Toggle class - adds and remove
+
+        //Removing Class 
+        // $("#btn").click(function(){
+        //     $("#box").toggleClass("circle")
+        // });
+
+        //get css property value
+        // $("#btn").click(function(){
+        //     var css = $("#box").css("background-color");
+        //     alert(css);
+        // });
+
+        //set css property value
+        // $("#btn").click(function(){
+        //     $("#box").css({"background-color":"pink"});
+        // });
+
+        //setting multiple css property value
+        // $("#btn").click(function(){
+        //     $("#box").css({
+        //         "background-color":"pink",
+        //         "border":"5px solid black",
+        //     });
+        // });
+
+
+
+        //$("#btn").click(function(){
+            //var data = $("#box").width(); //only width of content
+            //var data = $("#box").height();
+            //var data = $("#box").innerWidth(); //width of content + border
+            //var data = $("#box").outerWidth(); //width of content + border + padding
+            //var data = $("#box").outerWidth(true); //width of content + border + padding + margin 
+            //alert(data);
+        //});
+
+
+
+    </script>
+
+    
+   <!-- **************** Traversing Html **************** -->
+    <!-- grand parent -->
+    <!-- <ul id="list">
+        
+        <li> 
+          
+            <span id="span1">Item 1</span> 
+        </li>
+         
+        <li>
+           
+            <span id="span2">Item 2</span> 
+        </li>
+   </ul> -->
+
+   
+   <script>
+
+    // parent
+    // var elm = $("#span1").parent();
+    // elm.css("border","1px solid red");
+
+    // parents - it selects all up hierarchy till html tag
+    // var elm = $("#span1").parents();
+    // elm.css("border","1px solid red");
+
+
+    // parentsUntil - it selects all up hierarchy till given tag
+    // var elm = $("#span1").parentsUntil("body");
+    // elm.css("border","1px solid red");
+
+    //children - selects direct children
+    // var elm = $("#list").children();
+    // elm.css("border","1px solid red");
+    
+    //find - to find selected child element
+    // var elm = $("#list").find("#span2");
+    // elm.css("border","1px solid red");
+
+    
+   </script>
+
+
+
+   
+
+    
+
+
+
+
+
+</body>
+</html>
