@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Hosting in js</h1>
+    <script>
+        //getName(); //output - Namaste Js
+        //console.log(x); //output - undefined
+        //in most of the programming language this syntax will give error 
+        //because we are calling the getName(),x before its initialization
+        //in many programming languages - we can not access variables, functions before its initialization
+        
+        // but in JS this is not an error
+
+        //Because of Hositing 
+        //Hositing is a phenomenon in JS where we can access varibales and functions before we have initialize it
+
+        //This all happens due to the memory creation phase of Execution Context
+        //before the js code starts executing , the memory is allocated to each and every variable and function
+        //for variables - a special value 'undefined' is stored 
+        //and for functions the complete block of code is stored(actual copy of function)
+ 
+        getName(); //Namaste Js
+        console.log(x); //undefined
+        //console.log(y);//throws error - ref x is not defined
+        //here undefined and not defined are not the same things
+        //for y it is giving not defined ,. because it is not defined anywhere in the programs
+        //hence in the phase of memory allocation , memory is not allocated to y
+        
+        console.log(getName); //it prints the complete function
+        console.log(getName2); // undefined - arrow fn is like a variable
+        console.log(getName3); //undefined - behaves like a variable
+
+        //1. normal variables
+        var x= 7;
+        //2. function
+        function getName(){
+            console.log("Namaste Js");
+        }
+        //3. arrow function - when arrow fn is stored in variables , the getName2 behaves like a variable
+        var getName2 = () =>{
+            console.log("Namaste Js");
+        }
+        //4. another way to declare function - here also getName3 behaves like a variable
+
+        var getName3 = function(){
+            console.log("Namaste Js");
+        }
+
+        //getName();//this behaves as expected - because we are calling function after it is defined
+        //console.log(x);//this behaves as expected - because we are printing varibales after its declaration
+    </script>
+</body>
+</html>
