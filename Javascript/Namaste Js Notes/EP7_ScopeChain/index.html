@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Chaning</title>
+    <style>
+        img{
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <img src="Screenshot 2023-02-11 at 2.37.01 PM.png" alt="">
+    <script>
+
+        //Scope - where you can access a specific variable or function in our code
+        //eg - 
+        //what is the scope of variable b === where can I access a
+        //other way of saying - is b inside scope of some function a 
+
+        //The scope of variable directly depends on Lexical environment
+
+        function a(){
+            var b = 10;
+            c();
+            function c(){
+                console.log(b);
+            }
+        }
+        a();
+        //console.log(b)
+
+        //c's lexical parent is a , a's lexical parent is Global
+
+
+
+        //Whenever a execution context is created
+        //lexical environment is also created
+
+        //lexical evnt = local memory + lexical envt of its lexical parent
+
+        //lexical = in hierarchy, in a sequence
+        //in the above code we can say that 'c' function is lexically sitting inside 'a' function
+        //where some code is present inside other code
+
+        //in the above pragram
+        //execution context of c has a ref to execution context of a
+        //execution context of a has a ref to global execution context
+        //i.e lexical parent of 'c' is 'a' because 'c' is lexically inside 'a'
+        //hence 'c' will get access to lexical environment of 'a' also
+
+        //when line 23 - is going to execute 
+        //js checks if b is present in its local memory
+        //as it dont find
+        //now js goes to ref and goes to lexical envt of parent i.e a in this case
+        //so it gets the value of b , and it print in console
+
+        //if b is not present in a also. in that case it checks in a's parent i.e global ec's lexical envt
+        //the lexical parent of GEC is null
+        //this way of finding is called as scope chain
+
+        
+        //Scope Chain - is the chain of lexical envt  and parent references
+
+        //if js does not find anything in local memory , it goes one next level of scope chain  and continues
+
+    </script>
+</body>
+</html>
