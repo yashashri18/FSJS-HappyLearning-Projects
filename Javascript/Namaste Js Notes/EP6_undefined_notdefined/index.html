@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Defined/ Undefined</title>
+</head>
+<body>
+    <script>
+        //console.log(a)
+        //var a=7;
+        //console.log(a)
+        //even before executing this 
+        //js allocates memory to a with a special keyword undefined
+
+        //so if we get any variable value as undefined then it means it memory is allocated to it
+        //but does not initialized with a value
+
+        //but if a variable does not exists in the complete code
+        //then js throws the error of not defined
+
+        //console.log(b)//throws error -Uncaught ReferenceError: b is not defined
+        //not defined is something for which the memory is not allocated
+
+
+        //*Undefined is not equal to empty *
+
+        var c;
+        console.log(c)
+        //if we dont give any value to c throghout the program
+        //it will hold a special value of 'undefined' throughtout the program
+
+        //c=10
+        if(c === undefined){
+            console.log('c is undefined')
+        }
+        else{
+            console.log('c is not undefined')
+        }
+
+        //*JS is loosely typed language*        
+        var d;
+        console.log(d)
+        d=10;
+        console.log(d)
+        d="abcd";
+        console.log(d)
+
+
+        //* Never do this mistake
+        d=undefined;
+        console.log(d)
+        //this is not a mistake , but it is not a std practice
+        //because undefined is meant for a specific purpose
+    </script>
+</body>
+</html>
