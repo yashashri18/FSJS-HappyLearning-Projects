@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        body{
+            padding: 50px 100px;
+        }
+        h1{
+            text-align: center;
+            background-color: #0067B0;
+            color: aliceblue;
+            padding: 10px;
+            margin: 0;
+        }
+        textarea{
+            width: 99.3%;
+            margin: auto;
+            border: 1px solid #0067B0;
+            font-size: 16px;
+        }
+        p{
+            text-align: center;
+            background-color: #0067B0;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Word and character counter</h1>
+    <textarea name="" id="textbox" cols="30" rows="10"></textarea>
+    <p>
+
+        <span id="word">0</span> words and 
+        <span id="char">0</span> characters.
+    </p>
+
+    <script>
+        let textbox = document.getElementById("textbox");
+
+        textbox.addEventListener('input',function(){
+            var text = this.value;
+            let char = text.length;
+            //character count
+            document.getElementById("char").innerHTML = char;
+
+
+            //word count - using split function 
+
+            //1. remove extra spaces on sides of string
+            text = text.trim();
+            let words = text.split(" ");
+            //2. remove empty cells in array , which are formed deu to spaces
+            let cleanList = words.filter(function(elm){
+                //it will return only those elements which are not blank
+                return elm!="";
+            });
+            document.getElementById("word").innerHTML = cleanList.length;
+
+
+            
+        });
+    </script>
+</body>
+</html>
