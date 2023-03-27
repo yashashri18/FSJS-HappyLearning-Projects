@@ -1,0 +1,17 @@
+.movie{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    background: radial-gradient(black, transparent);
+    margin-top: 30px;
+    border-radius: 30px;
+}
+p{
+    font-size: 26px;
+}
+
+.notfound{
+    padding: 30px;
+    text-align: center;
+    color: red;
+}

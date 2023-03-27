@@ -1,0 +1,35 @@
+
+.search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  
+  
+  input[type="submit"]:hover {
+    background-color: #282c34;
+    color: antiquewhite;
+  }
+  
+  
+  .search > input[type="text"]{
+    width: 40%;
+    min-width: 170px;
+    padding: 5px;
+    font-size: 22px;
+    background-color: transparent;
+  }
