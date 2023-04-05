@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practise</title>
+    
+</head>
+<body>
+    <h1>Js Problem Practise</h1>
+    <h3>Q:1 Write a JavaScript program to calculate multiplication and division of two numbers (input from user).</h3>
+
+    <form>
+        <div>
+            <label>1st Number</label>
+            <input type="number" name="" id="first">
+        </div>
+        <br>
+        <div>
+            <label>2nd Number</label>
+            <input type="number" name="" id="second">
+        </div>
+        <br>
+        <div>
+            <input type="button" onClick="Multiply()" value="Multiply">
+            <input type="button" onClick="Divide()" value="Divide">
+        </div>
+        <div><p>The Result is </p><span id="result"></span></div>
+    </form>
+
+    <script>
+        function Multiply(){
+            num1 = document.getElementById('first').value
+            num2 = document.getElementById('second').value
+            document.getElementById('result').innerHTML = num1*num2;
+        }
+        function Divide(){
+            num1 = document.getElementById('first').value
+            num2 = document.getElementById('second').value
+            document.getElementById('result').innerHTML = num1/num2;
+        }
+    </script>
+    
+
+    
+    <script>
+        //Q :2 Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
+        function c_to_f(val){
+            f = (9*val + (32*5))/5
+            console.log(val+" Celcious  = "+f+" F units")
+        }
+        function f_to_c(val){
+            c = (5*(f-32))/9
+            console.log(val+" F units  = "+c+" Celcious")
+        }
+        c_to_f(40)
+        f_to_c(104)
+   
+    // Q:3  Write a JavaScript program to get the website URL (loading page).
+    console.log("The url is "+document.URL)
+
+
+    //Q:4 Write a JavaScript exercise to create a variable using a user-defined name.  
+
+    
+    </script>
+
+    
+
+
+</body>
+</html>
