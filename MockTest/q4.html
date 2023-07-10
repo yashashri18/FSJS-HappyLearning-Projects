@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Navbar</title>
+  <style>
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .navbar-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .navbar-menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+
+    /* Hamburger menu styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+      }
+
+      .navbar-menu.show {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">Logo</div>
+
+    <div class="navbar-menu" id="navbarMenu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="hamburger" id="hamburgerMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <script>
+    // Toggle navbar menu on hamburger click
+    var navbarMenu = document.getElementById("navbarMenu");
+    var hamburgerMenu = document.getElementById("hamburgerMenu");
+
+    hamburgerMenu.addEventListener("click", function() {
+      navbarMenu.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

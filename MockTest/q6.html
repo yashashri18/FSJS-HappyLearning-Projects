@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Modal</title>
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .modal-close {
+      float: right;
+      cursor: pointer;
+    }
+
+    /* Disable scrolling when modal is open */
+    body.modal-open {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openModal()">Open Modal</button>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h2>Modal Title</h2>
+      <p>Modal content goes here...</p>
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById("myModal");
+    var body = document.getElementsByTagName("body")[0];
+
+    function openModal() {
+      modal.style.display = "block";
+      body.classList.add("modal-open");
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+      body.classList.remove("modal-open");
+    }
+
+    modal.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape" && modal.style.display === "block") {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
