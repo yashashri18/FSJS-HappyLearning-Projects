@@ -553,9 +553,475 @@
 */
 
 
+// Arrays = variables to hold more than one values 
+//in js single array can have any datatype
+//Arrays are mutable - we can add,change the value
+//in JS , arrays are objects
+
+// let a = [1, 2, 3, 4 , "abcd" , true , null]
+// console.log(typeof a)
+// console.log(a)
+// console.log(a[0])
+// console.log(a[2])
+// console.log(a[4])
+// a[4] = "efgh"
+// console.log(a)
+// console.log("the lenght of array a is ",a.length)
 
 
 
 /* 
-*********  Lecture 17  - ******** 
+*********  Lecture 17  - Array Methods in JS ******** 
 */
+
+// let num = [1, 2, 3, 34, 4, 78]
+
+// 1. toString() 
+// let b = num.toString()
+// console.log(b)
+
+//2. join()
+// let c = num.join()
+// console.log(c)
+// console.log(typeof c)
+// console.log(num.join(' '))
+// console.log(num.join('--'))
+
+//3. pop() - pops out the last element from array
+// console.log(num)
+// let last = num.pop()
+// console.log(num)
+// console.log(last)
+
+
+//4 . push() - pushes element at the end
+//let newln = num.push(66) //returns new array length
+//console.log(newln, num)
+
+//5. shift - pops out element from  start
+// let a = num.shift()
+// console.log(a, num)
+
+//6. unshift() - adds element at the start
+//let a = num.unshift("start") //returns the new lenght of array
+//console.log(num, a)
+
+
+
+/* 
+*********  Lecture 18  - Array Methods in JS - part 2 ******** 
+*/
+
+
+
+//1. delete - is not a method , it is an operator
+//it does not delete the item , does not affect the lenght of array
+//it make item empty
+
+// let num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// console.log(num)
+// delete num[0]
+// console.log(num)
+
+// 2. concat - to concat two arrays
+
+// let num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// let num_more = [11, 12, 13, 14, 15, 16, 17, 18, 19]
+// console.log(num.concat(num_more))
+// let new_arr = num.concat(num_more, [21,22])
+// console.log(new_arr)
+
+
+// 3. sort - sorts the original array
+
+// let arr = ["a", "c" , "b"]
+// let num = [1, 34, 66, 22 , 11]
+// console.log(num.sort())
+// console.log(arr.sort())
+// console.log(arr)
+
+// 4. slice - slices out a piece from an array
+// it creates a new array
+
+// const num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// const num2 = num.slice(2) //start index to end
+// console.log(num2)
+// const num3 = num.slice(2, 5) //start index and end index
+// console.log(num3)
+
+// 5. splice - creates new array by adding and deleting elements from instanceof
+//first arg = start index
+//second arg = no of items to remove
+//remaing args = items to be added
+// const num = [1, 2, 3, 4, 5]
+// num.splice(2, 1, 22, 24, 44, 45, 88)
+// console.log(num) 
+
+
+
+
+// 6. reverse()
+// const num = [1, 2, 3, 4]
+// num.reverse()
+// console.log(num)
+
+// 7. Array.from - to create an array from collection
+// let name = 'yashashri'
+// let arr = Array.from(name)
+// console.log(arr)
+
+
+/* 
+*********  Lecture 19  - Loops with Arrays ******** 
+*/
+
+// let num = [3, 54, 1 , 2, 3]
+
+// 1. for loop 
+
+// for (let i=0; i< num.length;i++){
+//     console.log(num[i])
+// }
+
+// 2. for each loop
+// num.forEach((no)=>{
+//     console.log(no * no)
+// })
+
+// 3. for of loop
+// for (let i of num){
+//     console.log(i * i)
+// }
+
+// 4. for in loop - iterate over index
+
+// for(let i in num){
+//     console.log(i)
+// }
+
+
+/* 
+*********  Lecture 20  - Map , Filter , Reduce ******** 
+*/
+
+// 1. map () - returns a new array by performing some operation on each array element
+
+// let arr = [45,23,21]
+// let arr2 = arr.map((num, index)=>{
+//     return num+index
+// })
+// console.log(arr2)
+
+// 2. filter - returns a new array where elements are filtered as per condition
+// let arr = [45,23,21, 24, 30]
+// let arr2 = arr.filter((num)=>{
+//     return num%2==0
+// })
+// console.log(arr2)
+
+// 3. Reduce - reduces the array to single number output
+// let arr3 = [1, 2, 3, 5, 2, 1]
+
+// let num = arr3.reduce((h1, h2)=>{
+//     return h1+h2
+// },10)
+
+// console.log(num)
+
+
+/* 
+*********  Lecture 21  - Practice set on arrays ******** 
+*/
+
+// 1. create an array of numbers and take input from the user to add numbers to this array
+// let arr = [1, 2, 3, 4, 5]
+// let a = prompt("enter number of your choice")
+// a = Number.parseInt(a)
+// arr.push(a)
+// console.log(arr)
+
+// 2. keep adding numbers to the above array until 0 is added to the array
+
+// let arr = [1, 2, 3, 4, 5]
+// let a
+// while(a!=0){
+//     a = prompt("enter number of your choice")
+//     a = Number.parseInt(a)
+//     arr.push(a)
+// }
+// console.log(arr)
+
+
+// 3. filter for numbers divisible by 10 from a given array
+
+// let arr = [1, 2, 30, 7, 10 , 56, 89]
+// let arr2 = arr.filter((num)=>{
+//  return num%10==0
+// })
+// console.log(arr2)
+
+// 4. create an array of square of given numbers
+
+
+// let arr = [1, 2, 30, 7, 10 , 56, 89]
+// let arr2 = arr.map((num)=>{
+//  return num*num
+// })
+// console.log(arr2)
+
+
+// 5. use reduce to calculate factorial of a given number from an array of first n natural numbers
+// (n being the number whose factorial needs to be calculated)
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+// let arr2 = arr.reduce((x1, x2)=>{
+//  return x1*x2
+// })
+// console.log(arr2)
+
+
+/* 
+*********  Lecture 22  - Guess the Number ******** 
+*/
+
+// let number = Math.floor(Math.random()*100)+1
+// console.log(number)
+// let guess = 0
+// let chances = 0;
+// do{
+//     guess = prompt("guess number between 1 to 10")
+//     guess = Number.parseInt(guess)
+//     chances++
+//     if(guess < number){
+//         console.log("guess is lesser than number")
+//     }
+//     else if(guess > number){
+//         console.log('guess is greater than ')
+//     }else{
+//         console.log("you guess it correct")
+//     }
+// }while(guess != a)
+
+
+/* 
+*********  Lecture 23 , 24 - JS in Browser ******** 
+*/
+
+// Js was initially created to make webpages alive 
+// Js can be written right in a webpage HTML to make it interactive 
+
+// adding js into html 
+//way 1 - adding script file
+// allows separation of concers + browsers caches this js files 
+{/* <script src="./script.js"></script> */}
+
+//way 2 - write script in same file
+// no caching , no separation of concerns
+{/* <script>
+    console.log('hello')
+</script> */}
+
+
+/* 
+*********  Lecture 25 - JS console methods ******** 
+*/
+
+// console.log(console) 
+// console.error("this is error")
+// console.info('this is info')
+// console.assert(5>67)
+// console.assert(500>67)
+// console.warn("this is warning")
+// let obj = {a:1, b:2, c:3}
+// console.table(obj)
+
+/* 
+*********  Lecture 26 - JS Excerice 1******** 
+*/
+
+/* 
+*********  Lecture 27 - alert , prompt , confirm******** 
+*/
+
+// alert('hello')
+
+// prompt - asks input from user
+// let a = prompt("enter the value of a")
+// document.write("the value of a is ", a)
+
+
+//confirm - returns true / false
+// let age = confirm('is your age >= 18')
+// if(age == true){
+//     document.write('you can drive')
+// }else{
+//     document.write("you are under 18")
+// }
+
+
+/* 
+*********  Lecture 28 - DOM , BOM and window object ******** 
+*/
+
+//window - it is a global object
+// console.log(window)
+// console.log(window.document)
+// console.log(window.document.body)
+
+
+//DOM - represents the page content as html
+//document.body.style.backgroundColor = 'red';
+
+// BOM - represents additional objects provided by the browser
+// eg - functions like alert(), confirm(), propmt() are the part of BOM
+
+
+/* 
+*********  Lecture 29 - JS Practise set  ******** 
+*/
+
+// 1. accept age from user and suggest if user can drive or not
+
+// let age = prompt("Enter your age")
+// age = Number.parseInt(age)
+
+// const canDrive = (age) => {
+//     return age>18?true:false
+// }
+
+// if(canDrive(age)){
+//     alert("You can drive")
+// }else{
+//     alert("you cannot drive")
+// }
+ 
+// 2. in above question ask the user if he wants to see the prompt again
+
+// let playAgain = true
+// const canDrive = (age) => {
+//     return age>18?true:false
+// }
+// while(playAgain == true){
+//     let age = prompt("Enter your age")
+//     age = Number.parseInt(age)
+//     if(canDrive(age)){
+//         alert("You can drive")
+//     }else{
+//         alert("you cannot drive")
+//     }
+//     playAgain = confirm("You want to play again")
+// }
+
+
+// 3. in above question use console,error() to log the error is user entered age is negative 
+
+// let playAgain = true
+// const canDrive = (age) => {
+//     return age>18?true:false
+// }
+// while(playAgain == true){
+//     let age = prompt("Enter your age")
+//     age = Number.parseInt(age)
+//     if(age<0){
+//         console.error("please enter a valid age")
+//         break;
+//     }
+//     if(canDrive(age)){
+//         alert("You can drive")
+//     }else{
+//         alert("you cannot drive")
+//     }
+//     playAgain = confirm("You want to play again")
+// }
+
+// 4. if user enters a number greater than 4, the program change url to google.com(redirection)
+
+// let number = prompt("Enter your number")
+// number = Number.parseInt(number)
+
+// if(number > 4){
+//     location.href = "https://google.com"
+// }
+
+// 5. change the bg of page to red based on users input
+
+// let col = prompt("Enter bg color")
+// document.body.style.backgroundColor = col
+
+
+/* 
+*********  Lecture 30 - snake , water , gun game ******** 
+*/
+
+// case 1 - snake water -> winner is snake
+// case 2 - water gun   -> winner is water 
+// case 3 - snake gun   -> winner is gun
+
+
+/* 
+*********  Lecture 31 - Walking the dom ******** 
+*/
+
+// DOM tree refers to the HTML page where all the nodes are objects. 
+// There are three main types of nodes in the DOM tree
+// 1. Text Node
+// 2. element Node
+// 3. comment Node
+
+// in an html page , html is at the root and head and body are its children
+
+
+/* 
+*********  Lecture 32 - Accessing Children of an element ******** 
+*/
+
+// console.log(document.body.firstChild) //returns empty text node as it assumes space as a text after body tag
+// console.log(document.body.firstElementChild) // returns first element child in body
+
+// console.log(document.body.lastChild) 
+// console.log(document.body.lastElementChild) //same as lastElementChild
+
+// console.log(document.body.childNodes) //returns nodelist of all types of child nodes
+// console.log(document.body.children) // returns html collection of elements
+
+//childnodes looks like an array but not actually an array
+//use Array.from(document.body.childNodes) to convert it into an array
+
+// elm.childNodes[0] = ele.firstChild
+// elm.childNodes[elm.childNodes.length - 1] = elm.lastChild
+
+
+/* 
+*********  Lecture 33 - Parent and Siblings ******** 
+*/
+
+// Siblings are the nodes that are children of the same parent
+// eg - head and body are siblings and are children of html
+
+// prevSibling - head is prevSibling of body
+// nextSibling - body is nextSibling of head
+
+// a = document.body.firstChild
+// console.log(a.firstChild.nextSibling)
+// console.log(a.parentNode) 
+// console.log(a.parentElement) //returns same as parentNode
+
+// parentElement retuns only when it has element as parent otherwise returns null
+
+
+/* 
+*********  Lecture 34 - Element Navigation Only ******** 
+*/
+
+// we were getting all types of children - comments , text nodes , elements
+// but we need only elements 
+
+// b = document.body
+// console.log(b.firstChild) //returns any type of node
+// console.log(b.firstElementChild) //returns only element node
+
+// console.log(b.lastChild)
+// console.log(b.lastElementChild)
+
+// console.log(b.firstElementChild.firstElementChild.nextElementSibling)
+// console.log(b.firstElementChild.lastElementChild.previousElementSibling)
