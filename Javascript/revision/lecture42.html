@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributes and their methods</title>
+
+</head>
+<body>
+    <div id="first" class="hey" data-game="mario" data-player="yash">
+        Hey I am first container
+    </div>Hello World
+
+    <script>
+        let first = document.getElementById('first')
+        
+        //get class attribute
+        //let a = first.getAttribute('class')
+        //console.log(a)
+
+        //to check if an attibute is there
+        //console.log(first.hasAttribute('class')) //true
+        //console.log(first.hasAttribute('name')) //false
+
+        //to set the attribute
+        //first.setAttribute('hidden', 'true')
+        //first.setAttribute('name',"yashashri")
+
+        //this replaces existing class
+        //first.setAttribute('class',"sach true")
+
+        //to remove attribute
+        //first.removeAttribute('id')
+
+        //console.log(first.attributes)
+
+        // always add custom attributes with start as data-
+        //console.log(first.dataset)
+        //console.log(first.dataset.player)
+        //console.log(first.dataset.game)
+
+    </script>
+   
+</body>
+</html>

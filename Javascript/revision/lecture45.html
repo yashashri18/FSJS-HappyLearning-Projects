@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classname_classlist</title>
+    <style>
+        .yellow{
+            background-color: yellow;
+            color: white;
+        }
+        .red{
+            background-color:red;
+            color: white;
+        }
+        .text-dark{
+            color:black
+        }
+    </style>
+
+</head>
+<body>
+    <div id="first">
+        <span>Hey I am good</span>
+    </div>
+    <script>
+
+        //className
+        first = document.getElementById('first')
+        //first.className = "red"
+        //it replaces the original classes if there
+        first.className = "yellow text-dark"
+
+        //classList
+        console.log(first.classList)
+        first.classList.remove('text-dark')
+        first.classList.add('text-dark')
+        first.classList.toggle('addremove')
+        first.classList.contains('abcd') //returns true or false
+        
+ 
+ </script>
+</body>
+</html>

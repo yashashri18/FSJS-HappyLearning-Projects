@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertAdjacentHTML, insertAdjacentElement , insertAdjacentText</title>
+</head>
+<body>
+    <div id="first">Hey I am first</div>
+    
+    <script>
+
+        // HTML/Element/Text can be inserted at 4 places 
+        // 1. beforebegin 
+        // 2. beforeend
+        // 3. afterbegin 
+        // 4. afterend 
+        first = document.getElementById('first')
+        first.insertAdjacentHTML('beforebegin','<h1>Before Begin</h1>')
+        first.insertAdjacentHTML('beforeend','<h1>Before End</h1>')
+        first.insertAdjacentHTML('afterbegin','<h1>After Begin</h1>')
+        first.insertAdjacentHTML('afterend','<h1>After End</h1>')
+    </script>
+</body>
+</html>

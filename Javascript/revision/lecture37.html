@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches,Closest and Contains</title>
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="box" id="id1">This is id1 element <span id="sp1"> I am span</span></div>
+    <div class="box" id="id2">This is id2 element</div>
+    <!-- Bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script>
+        // Matches , Closest and Contains methods
+        // these are the important methods to search the dom
+
+        //Matches - to check if element matches the given css selector
+        // let id1 = document.getElementById('id1')
+        // console.log(id1)
+        // console.log(id1.matches('.class')) //returns true
+        // console.log(id1.matches('.box')) //returbs false
+
+        //Closest - to look for the nearest ansestor that matches the given css selector
+        //the element itself is also checked
+
+        // let id1 = document.getElementById('id1')
+        // let sp1 = document.getElementById('sp1')
+        // console.log(sp1.closest('#sp1'))
+        // console.log(sp1.closest('#id1'))
+
+
+
+        //elemA.Contains(elemB) 
+        //returns true if elemB  is inside elemA or when elemA == elemB
+        // let id1 = document.getElementById('id1')
+        // let id2 = document.getElementById('id2')
+        // let sp1 = document.getElementById('sp1')
+        // console.log(id1.contains(sp1)) // returns true
+        // console.log(id2.contains(sp1)) //returns false
+        // console.log(id2.contains(id2)) //return true
+
+
+        
+
+
+
+    </script>
+
+
+</body>
+</html>

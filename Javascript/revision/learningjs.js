@@ -958,6 +958,42 @@
 // case 3 - snake gun   -> winner is gun
 
 
+// let user = prompt("enter your choice - S , W , G")
+// //to generate number between 0 to 2 (0/1/2)
+// let cpuI = Math.floor(Math.random() * 3)
+// let cpu = ['S', 'W' , 'G'][cpuI]
+
+//computers choice
+//console.log('cpus choice ',cpu[cpuI])
+//users choice
+//console.log('users choice ', user)
+
+// const match = (cpu, user) => {
+//     if(cpu === "S" && user === "W"){
+//         return 'winner is cpu'
+//     }
+//     else if(cpu === "W" && user === "S"){
+//         return 'winner is user'
+//     }
+//     else if(cpu === "W" && user === "G"){
+//         return 'winner is cpu'
+//     }
+//     else if(cpu === "G" && user === "W"){
+//         return 'winner is user'
+//     }
+//     else if(cpu === "S" && user === "G"){
+//         return 'winner is user'
+//     }
+//     else if(cpu === "G" && user === "S"){
+//         return 'winner is cpu'
+//     }else{
+//         return 'Nobody , it a tie'
+//     }
+// }
+// console.log(match(cpu, user))
+
+
+
 /* 
 *********  Lecture 31 - Walking the dom ******** 
 */

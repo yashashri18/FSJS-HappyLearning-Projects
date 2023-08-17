@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practise set</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        nav{
+            display: flex;
+            background: rgb(122, 126, 126);
+        }
+        nav li{
+            list-style: none;
+            padding: 0px 23px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </nav>
+    <table>
+        <thead>
+            <td>Title</td>
+            <td>Title 2</td>
+            <td>Title 3</td>
+        </thead>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+            <td>data 3</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+            <td>data 3</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+            <td>data 3</td>
+        </tr>
+    </table>
+    <script>
+    // 1. create a navbar and change the color of its first element to red
+    //document.getElementsByTagName('nav')[0].firstElementChild.style.color = 'red'
+
+    // 2. create a table without tbody  , use inspect and view page source to check if browser add tbody
+    //inspect renders html by creating tbody
+    // but view-page-source shows as it is written html
+
+    // 3. create an element with 3 children . now change the color of first and last children only 
+    //document.getElementsByTagName('nav')[0].firstElementChild.style.color = 'green'
+    //document.getElementsByTagName('nav')[0].lastElementChild.style.color = 'green'
+
+    // 4. write js program to change the bg color of all li tags to cyan 
+    // let lis = document.getElementsByTagName('li')
+    // console.log(Array.from(lis))
+    // Array.from(lis).forEach(element => {
+    //     element.style.backgroundColor ="cyan"
+    // });
+
+    // 5. which of the following is used to look for the farthest ancestor that matches given css selector 
+    // a. matches b. closest c. contains d. none of these
+    //answer is - d. none of thses
+    //these methods start from nearest anscestors
+    </script>
+</body>
+</html>

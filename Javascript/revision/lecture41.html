@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML , outerHTML</title>
+</head>
+<body>
+    Hello World 
+    <span id="first"><b>Hey I am span</b></span>
+    
+    <script>  
+    //console.log(document.getElementsByTagName('span')[0])
+    //op - <span>Hey I am span</span>
+    //console.dir(document.getElementsByTagName('span')[0])
+    //op - outputs span as an obj
+
+
+    //console.log - shows the element dom tree
+    //console.dir - shows the element as an object with its properties
+
+
+    //tagName/ nodeName -
+    //tagName - only exists for Element nodes
+    //nodeName - defined for any nod(text , comment , element)
+    //console.log(document.body.firstChild.nodeName) //text
+    //console.log(document.body.firstElementChild.nodeName) //span
+    //console.log(document.body.firstChild.tagName)  //undefined
+    //console.log(document.body.firstElementChild.tagName)  //span
+
+
+    //innerHTML , outerHTML
+    //innerHTML - get html inside the element as a string
+    //outerHTML - contains full html = inner html + the element itself
+
+
+    //console.log(first.innerHTML) //<b>Hey I am span</b>
+    //console.log(first.innerText) //Hey I am span
+    //console.log(first.outerHTML) //<span id="first"><b>Hey I am span</b></span>
+    //console.log(first.outerText) //Hey I am span
+
+
+    //setting inner html , inner text
+    //let first = document.getElementById('first')
+    //first.innerHTML = '<i>This is italic span</i>'
+    //first.innerText = 'This is inner span'
+
+    //console.log(document.body.firstChild.data)
+    //console.log(document.body.textContent)
+
+    //let first = document.getElementById('first')
+    //first.hidden = true
+    //first.hidden = false
+    </script>
+</body>
+</html>
