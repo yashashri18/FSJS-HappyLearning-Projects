@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Joke Generator</title>
+    
 </head>
 <body>
-    <div><p>This is default Joke</p></div>
+    <div id="joke">This is sample Joke</div>
     <script>
+
+        const jokes = [
+        "I told my wife she was drawing her eyebrows too high. She seemed surprised.",
+        "Parallel lines have so much in common. It’s a shame they'll never meet.",
+        "I used to play piano by ear, but now I use my hands.",
+        "Why don't scientists trust atoms? Because they make up everything.",
+        "Did you hear about the claustrophobic astronaut? He just needed a little space.",
+        "I told my wife she was overreacting. She just flipped.",
+        "I used to be a baker, but I couldn't make enough dough.",
+        "I'm reading a book on anti-gravity. It's impossible to put down.",
+        "Why did the scarecrow win an award? Because he was outstanding in his field.",
+        "Parallel lines have so much in common. It's a shame they're never on the same track.",
+        "I asked the librarian if the library had books on paranoia. She whispered, 'They're right behind you!'",
+        "Why don't skeletons fight each other? They don't have the guts.",
+        "Did you hear about the guy who invented Lifesavers? He made a mint.",
+        "I told my wife she was drawing her eyebrows too high. She seemed surprised.",
+        "Did you hear about the mathematician who’s afraid of negative numbers? He'll stop at nothing to avoid them.",
+        "How do you make holy water? You boil the hell out of it.",
+        "I'm friends with all electricians. We have great current connections.",
+        "What did one wall say to the other wall? 'I'll meet you at the corner!'",
+        "Why don't some couples go to the gym? Because some relationships don't work out.",
+        "I told my wife she was pretty enough without makeup. She replied, 'That's nice, now pass me my foundation!'"
+        ];
+
+        
+        setInterval(()=>{
+            const no = Math.floor(Math.random()*20)
+            document.getElementById('joke').innerHTML = jokes[no]
+        },1000)
+        
+    
 
     </script>
 </body>

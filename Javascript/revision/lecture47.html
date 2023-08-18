@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to browser events</title>
+</head>
+<body>
+    <div class="container">
+        <button onclick="alert('hello')">Click me</button>
+        <button onclick="alert('hello'); let a = 6; console.log(a)">Click me</button>
+        <div id="eventdiv" onclick="console.log('on click of div - inline')" onmouseover="console.log('mouseover on div')">To check mouse events</div>
+    </div>
+    <script>
+
+        // 1. mouse events - click , double click , contextmenu(right click), 
+        // mouseover/mouseout , mouseup/mousedown , mousemove
+
+        // 2. keyboard events - keydown and keyup
+
+        //these events overide inline events
+        let b = document.getElementById('eventdiv')
+        b.onmouseout = () => {
+            console.log('mouseout on div')
+        }
+        b.onclick = () => {
+            console.log('on click of div - script')
+        }
+ 
+
+    </script>
+</body>
+</html>

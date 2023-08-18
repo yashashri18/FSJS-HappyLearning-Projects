@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 48</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <script>
+
+        // addEventListener is used to assign multiple handlers to an event
+        let x = function(e) {
+            alert('Event Listener 1')
+        }
+
+        //event object - 
+        //when an event happens 
+        //browser creates an event obj
+        //and puts into it 
+        //and passes it as an argument to the handler
+        let y = function(e) {
+            alert('Event Listener 2')
+        }
+
+        btn = document.getElementById('btn')
+        btn.addEventListener('click', x)
+        btn.addEventListener('click', y)
+
+        let a = prompt("enter which event listerner you want to execute - 1 or 2")
+        if(a == '1'){
+            btn.removeEventListener('click',y)
+            //we always have to pass function ref while removing listenrer
+            //giving fn def directly will not work here
+        }
+        if(a == '2'){
+            btn.removeEventListener('click',x)
+        }
+
+    </script>
+</body>
+</html>
