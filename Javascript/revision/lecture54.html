@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Promises</title>
+</head>
+<body>
+    <script>
+        let promise1 = new Promise(function(resolve, reject){
+            alert('hello')
+            resolve('Hello - i am resolvred')
+        })
+
+        console.log('hello 1')
+        setTimeout(function(){
+            console.log("hello 3 - after 3 seconds")
+        },3000)
+        console.log('hello 2')
+        console.log(promise1)
+
+        // output
+        // hello 1
+        // hello 2
+        // promise fulfilled
+        // hello 3 - after 3 seconds
+
+        // Introduction to Promises
+
+        // the solution to the callback hellp is promises
+        // A promise is a 'promise of code execution'
+        // the code either executes or fails 
+        // in both the cases the subscriber will be notified
+
+        // The syntax of a promise looks like this -
+
+        let promise = new Promise(function(resolve, reject){
+            //executor
+        })
+
+        // resolve and reject are the callbacks provided by js itself
+        // they are called like this - 
+        // resolve(value) - if the job is finished successfully
+        // reject(value) - if the job fails
+
+        // The promise object returned by the new Promise constructor has these promises
+
+        // state - Initially pending , then changes to either 'fulfilled' when resolve is called 
+        // or 'rejected' when reject is called
+
+        // result - initially undefined, then changes to value if resolved or error when rejected
+
+
+    </script>
+</body>
+</html>
