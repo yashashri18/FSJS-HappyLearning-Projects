@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <script>
+
+        //console.log(rahul) // it gives error and program does not execute further
+        //console.log("hello")
+        //console.log("hi")
+
+        // Error Handling
+        // our script can have mistakes
+        // our program halts when error occurs and does not execute further code
+    
+        //the try..catch syntax allows us to catch errors so that the script
+        //instead of dying can do something more reasonable
+
+        //try catch syntax has two main blocks - try and catch
+
+        // try{
+        //     console.log(rahul)
+        // }
+        // catch{
+        //     console.error("there is error")
+        // }
+
+        // try{
+        //     console.log(priti)
+        // }
+        // catch(error){
+        //     console.error(error)
+        // }
+        // console.log("hello")
+        // console.log("hi")
+        //program does not hault the execution of rest of the code
+
+        //try catch works synchronously - try catch does not work with async
+        // console.log('hello')
+        // try{
+        //     setTimeout(()=>{
+        //         console.log(rahul)
+        //     },200)
+        // }
+        // catch{
+        //     console.log("rahul is not defined")
+        // }
+        // setTimeout(()=>{
+        //     console.log("second timeout")
+        // },400)
+        // console.log('hi')
+        //here it will not handle error error
+
+
+
+        //but we can write try catch inside setTimeout
+        setTimeout(()=>{
+            try{
+                console.log(rahul)
+            }
+            catch{
+                console.log('rahul is not defined')
+            }
+        },100)
+
+    
+    </script>
+</body>
+</html>

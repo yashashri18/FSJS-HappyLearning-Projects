@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error obj and custom error</title>
+</head>
+<body>
+    <script>
+        //the error object
+        //for all the built in errors, the error object has two main propertie
+        //error.name
+        //error.message
+
+        // try{
+        //     console.log(harry)
+        // }
+        // catch(error){
+        //     console.log(error)
+        //     console.log(error.name)
+        //     console.log(error.message)
+        // }
+
+        //Custom Errors
+        // try{
+        //     //throw new Error("harry is not good")
+        //     throw new ReferenceError("harry is not defined")
+        // }
+        // catch(err)
+        // {
+        //     console.log(err)
+        // }
+
+        try{
+            let age = prompt("enter your age")
+            age = Number.parseInt(age)
+            if(age<18){
+                throw new Error("you cannot drive - age less than 18")
+            }else{
+                alert('you can drive')
+            }
+        }
+        catch(err){
+            console.log(err)
+        }
+    </script>
+</body>
+</html>

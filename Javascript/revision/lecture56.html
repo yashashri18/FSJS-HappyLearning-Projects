@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Chaining</title>
+</head>
+<body>
+    <script>
+        //Promise Chaining
+        // we can chain promises and make them pass the resolved values to one another like this-
+        // idea is to pass resolved value to chain of then handlers
+        
+        // let p1 = new Promise((resolve, reject)=>{
+        //     setTimeout(()=>{
+        //         console.log('inside Promise 1 after 2 seconds')
+        //         resolve(56)
+        //     },2000)
+        // })
+        // p1.then((val)=>{
+        //     console.log('p1 then -',val)
+        //     let p2 = new Promise((resolve, reject)=>{
+        //         setTimeout(()=>{
+        //             console.log('inside Promise 2 after +2 seconds')
+        //             resolve('Promise 2')
+        //         },2000)
+               
+        //     })
+        //     return p2
+        // }).then((val)=>{
+        //     console.log("p2 then - ",val)
+        //     let p3 = new Promise((resolve , reject)=>{
+        //         setTimeout(()=>{
+        //             console.log('inside Promise 3 after +2 seconds')
+        //             resolve('Promise 3')
+        //         },2000)
+                
+        //     })
+        //     return p3
+        // }).then((val)=>{
+        //     console.log('p3 then - ', val)
+        //     return 5
+        // }).then((val)=>{
+        //     console.log("it has returned value - ", val, "immdediately")
+        // }).then(()=>{
+        //     console.log("we are finished finally")
+        // })
+    
+
+        
+        //writing our loadscript using Promise
+        const loadscript = (src) => {
+             return new Promise((resolve, reject)=>{
+                let script = document.createElement('script')
+                script.type = 'text/javascript'
+                script.src = src
+                document.body.appendChild(script)
+                script.onload = () => {
+                    resolve(1)
+                }
+                script.onerror = () => {
+                    reject(new Error('there is some error loading this script'))
+                }
+            })
+        } 
+        
+        let p1 = loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js')
+
+        p1.then((val)=>{
+            console.log("promise is resolved with the value - ",val)
+            return loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js') 
+        }).then((val)=>{
+            console.log("promise is resolved")
+            return loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js')
+        }).then((val)=>{
+            console.log(" promise is resolved")
+        }).catch((err)=>{
+            console.log("promise is reejected with the error  - ",err)
+        })
+            
+    </script>
+</body>
+</html>

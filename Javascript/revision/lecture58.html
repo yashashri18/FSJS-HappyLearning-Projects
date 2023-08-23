@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise API</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve('Value 1')
+            },1000)
+        })
+        let p2 = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve('Value 2')
+            },2000)
+        })
+        let p3 = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve('Value 3')
+            },3000)
+        })
+
+        p1.then((value)=>{
+            console.log(value)
+        })
+        p2.then((value)=>{
+            console.log(value)
+        })
+        p3.then((value)=>{
+            console.log(value)
+        })
+
+        //but now we want that something should execute once all the promise will be resolved
+        let promise_all = Promise.all([p1,p2,p3])
+        promise_all.then((value)=>{
+            console.log("all are resolved")
+            console.log(value) //returns values of all 3 promises
+        })
+    </script>
+</body>
+</html>

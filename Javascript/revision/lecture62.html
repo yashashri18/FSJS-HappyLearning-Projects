@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finally clause</title>
+</head>
+<body>
+    
+    <script>
+        //try - always executes 
+        //catch - executes only if there are errors 
+        //finally - will always executes - does not mattter error is there or not
+        //finally block is used to perform operations like -
+        //closing of file 
+        //exit the loop / write to the log file 
+
+        //example 1 
+        // try{
+        //     let a = 0
+        //     console.log("program runs successfully")
+        //     console.log(rahul)
+        //     //below line does not executes due to above error
+        //     console.log("this line does not execute - if there is error before this line ")
+        // }
+        // catch(err){
+        //     console.log("this is error")
+        //     console.log(rahul)
+        //     console.log("this line will not execute - as there is error in catch")
+        // }
+        // finally{
+        //     console.log("100% execution")
+            
+        // }
+        // console.log("this line will not execute - as there is error in catch")
+
+    
+        //example 2
+        const f = () => {
+            try{
+            console.log("in try block")
+            return 
+            }
+            catch(err){
+                console.log("this is error")
+                console.log(rahul)
+                console.log("this line will not execute - as there is error in catch")
+            }
+            finally{
+                console.log("100% execution")
+                
+            }
+            console.log("this line will not execute - as there is error in catch")
+        }
+        console.log(f())
+        // here also finally block is executing 
+        // even if the program is returning before
+        
+    </script>
+</body>
+</html>

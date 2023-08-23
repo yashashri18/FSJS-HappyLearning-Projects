@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise-multipleHandler</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject)=>{
+            alert("p1 promise is not yet resolved")
+            setTimeout(()=>{
+                
+                resolve(1)
+            },2000)
+        })
+        //below multiple handlers run in the sequence in which they are written
+        p1.then(()=>{
+            alert("1 . congrats p1 promise is resolved")
+        })
+        p1.then(()=>{
+            alert("2. congrats p1 promise is resolved")
+        })
+        p1.then(()=>{
+            alert("3. congrats p1 promise is resolved")
+        })
+    </script>
+</body>
+</html>

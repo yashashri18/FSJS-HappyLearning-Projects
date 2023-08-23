@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProblemSet</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <script>
+        // 1. write a program to load a js file in the browser using Promise. 
+        // use then() to display an alert when load is complete
+
+        const loadScript = async (src) =>{
+            return new Promise((resolve,reject)=>{ 
+                let script = document.createElement('script')
+                script.src = src
+                document.body.appendChild(script)
+                script.onload = () => {
+                    console.log('hello')
+                    resolve(src)
+                }     
+            })
+        }
+        // a = loadScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js')
+        // a.then((src)=>{
+        //     console.log("script is loaded with src - ",src)
+        // })
+
+        //2. 
+        //using async await
+        // const main = async() => {
+        //     console.log("executes before loadscript()")
+        //     let a = await loadScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js')
+        //     console.log("resolved with value -",a)
+        //     console.log("executes after loadscript()")
+        // }
+        // main()
+
+        //3. create a promise which rejects after 3 seconds
+        // use try catch to handle this error
+
+        // let p = () => {
+        //     return new Promise((resolve, reject)=>[
+        //         setTimeout(()=>{
+        //             reject(new Error("promise rejected"))
+        //         },3000)
+        //     ])
+        // }
+        // let a = async () => {
+        //     try{
+        //         let c = await p()
+        //         console.log(c)
+        //     }
+        //     catch(err){
+        //         console.log('this error has been resolved')
+        //     }
+        // }
+        // a()
+
+        // 4. write a program using Promise.all() inside an async await 
+        // to await 3 promises
+        // compare its result with the case where we await these promises one by one
+
+        let p1 = async () => {
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve(10)
+                },2000)
+            })
+        }
+        let p2 = async () => {
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve(20)
+                },4000)
+            })
+        }
+        let p3 = async () => {
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve(30)
+                },6000)
+            })
+        }
+
+        const run = async () => {
+            // solution 1
+            // let a1 = await p1()
+            // console.log(a1)
+            // let a2 = await p2()
+            // console.log(a2)
+            // let a3 = await p3()
+            // console.log(a3)
+            //here we get output one after another
+            // 10 , 20 , 30 after 2 ,4 and 6 seconds respectively
+
+            // solution 2 
+            // let a1 = p1()
+            // let a2 = p2()
+            // let a3 = p3()
+            // let values = await Promise.all([a1,a2,a3])
+            // console.log(values)
+            //here we get all outputs after 6 seconds
+        }
+        run()
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Promise_then_catch</title>
 </head>
 <body>
+
+    <script>
+    //then() and catch() methods notifies customer that the promise is resolved or pending
+    //resolve and reject are the bulitin callback fn in promise that js gives us
+
+    let p = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            console.log("i am inside promise")
+            //Method 1
+            //resolve(56)
+            //reject(new Error(' i am error '))
+
+            //Method 2
+            //resolve(56, null)
+            reject(null, new Error('I am error'))
+       }, 2000)
+    })
+
+    console.log(p)//state - pending , result - undefined
+
+    // Method 1
+    //the method is executed when promise is resolved
+    //to get the value
+    // p.then((val)=>{
+    //     console.log("i got resolved with the value - "+ val)
+    //     console.log(p) // state - fulfilled , result - 56
+    // })
+
+    //catch method is executed when promise is rejected
+    //to catch the errors
+    // p.catch((err)=>{
+    //     console.log("promise p got rejected with - ", err)
+    //     console.log(p) // state - rejected , result - 56
+    // })
+
     
+    //Method 2
+    // or we can handle value and error in one then
+    p.then((value)=>{
+        console.log("i got value")
+    },(error)=>{
+        console.log(" i got error")
+    })
+
+    // every promise has state and state - 
+    // initially state is pending , then it is either fulfilled or rejected
+    // initially result is undefined , then it gets some value if resolved , error if rejected
+    </script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async_await</title>
+</head>
+<body>
+    <script>
+        //Async Await - This is a special syntax to work with Promises in JS
+        //we can create a function as async and we can await Promises in that
+        //an async function always returns a promise
+
+        async function harry1(){
+            return 10
+        }
+        harry1().then((val)=>{
+            alert(val)
+        })
+        // the above syntax proves that - async functions returns promises
+
+        async function harry() {
+            let delhiWeather = new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve('27 deg')
+                }, 2000);
+            })
+            let bangloreWeather = new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve('21 deg')
+                }, 5000);
+            })
+
+            //delhiWeather.then(alert)
+            //bangloreWeather.then(alert)
+            
+            console.log("fetching delhi weather")
+            //below code execution holds until it fetches delhi weather
+            let delhiW = await delhiWeather
+            console.log("fetched delhi weather ",delhiW)
+            console.log("fetching banglore weather")
+            //below code execution holds until it fetches banglore weather
+            let bangloreW = await bangloreWeather
+            console.log("fetched banglore weather ",bangloreW)
+            return [delhiW, bangloreW]
+        }
+
+        console.log("Welcome to weather control room")
+        let a = harry()
+        a.then((value)=>{
+            console.log("both weathers have been fetched")
+        })
+
+    </script>
+</body>
+</html>
