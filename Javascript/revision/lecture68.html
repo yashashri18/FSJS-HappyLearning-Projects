@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <script>
+        //Cookies are stored as key-value pair separated by semicolon
+        //in browser
+
+        console.log(document.cookie)
+        document.cookie = "name=harry"
+        document.cookie = "name1=harry1" //it does not override existing cookie , rather it adds on existing cookie
+        document.cookie = "name2=harry2"
+        document.cookie = "name=harry3" //this will overide the value of name
+        console.log(document.cookie)
+
+        let key = prompt("enter your key")
+        let value = prompt("enter your value")
+        //encodeURIComponent() accepts special characters also eg- semicolon
+        //console.log("encoding semicolon - ", encodeURIComponent(';'))
+        //console.log("decoding  semicolon %3B - ", decodeURIComponent('%3B'))
+        document.cookie= `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+        console.log(document.cookie)
+    </script>
+</body>
+</html>

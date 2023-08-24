@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clock using JS</title>
+    <title>Digital Clock using JS</title>
 </head>
 <body>
-    
+    <div id="time">hello</div>
+    <script>
+        let time = document.getElementById('time')
+        setInterval(()=>{
+            let date = new Date()
+            let options = {
+                weekend : 'long', year:'numeric', month:'short',
+                day:'numeric', hour: '2-digit',minute :'2-digit'
+            }
+            let d = date.toLocaleTimeString('en-us',options)
+            time.innerHTML = d
+        },1000)
+    </script>
 </body>
 </html>

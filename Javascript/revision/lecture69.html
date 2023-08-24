@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <script>
+        //LocalStorage
+        //localstorage is a web storage object which are not sent to server with each requet
+        //this data survives a full page refresh and even a full browser request
+
+        //keys and values must be strings
+        //few methods provided by localstorage
+        localStorage.setItem("testkey1", "testvalue1")
+        console.log(localStorage)
+        console.log(localStorage.getItem("testkey1"))
+        localStorage.removeItem("testkey1") //to remove perticular item
+        console.log(localStorage)
+        localStorage.clear() // to claer local storage
+        console.log(localStorage)
+        localStorage.setItem("testkey1", "testvalue1")
+        console.log(localStorage.length) //returns lenght
+        localStorage.setItem("testkey1", "anotherval") //overrides the value
+        console.log(localStorage)
+    </script>
+</body>
+</html>
